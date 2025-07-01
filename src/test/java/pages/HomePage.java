@@ -1,9 +1,12 @@
 package pages;
 
 import java.time.Duration;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -66,6 +69,62 @@ public class HomePage extends BasePage {
 	@FindBy(xpath="//span[contains(text(),'Checkout')]")
 	private WebElement checkoutLabel;
 	
+	@FindBy(xpath="//input[@placeholder='Search']")
+	private WebElement searchBox;
+	
+	@FindBy(xpath="//button[@class='btn btn-default btn-lg']")
+	private WebElement searchButton;
+	
+	@FindBy(xpath="//span[@id='cart-total']")
+	private WebElement shoppingCartButtonLabel;
+	
+	@FindBy(linkText="Desktops")
+	private WebElement desktopsNavLink;
+	
+	@FindBy(linkText="Laptops & Notebooks")
+	private WebElement laptopsNotebooksNavLink;
+	
+	@FindBy(linkText="Components")
+	private WebElement componentsNavLink;
+	
+	@FindBy(linkText="Tablets")
+	private WebElement tabletsNavLink;
+	
+	@FindBy(linkText="Software")
+	private WebElement softwareNavLink;
+	
+	@FindBy(linkText="Phones & PDAs")
+	private WebElement phonesPDASNavLink;
+	
+	@FindBy(linkText="Cameras")
+	private WebElement camerasNavLink;
+	
+	@FindBy(linkText="MP3 Players")
+	private WebElement mp3PlayersNavLink;
+	
+	@FindBy(xpath="//li[@class='dropdown'][1]//li//a")
+	private List <WebElement> desktopsNavLinkDropDownLinks;
+	
+	@FindBy(xpath="//li[@class='dropdown'][2]//li//a")
+	private List <WebElement> laptopsNotebooksNavLinkDropDownLinks;
+	
+	@FindBy(xpath="//li[@class='dropdown'][3]//li//a")
+	private List <WebElement> componentsNavLinkDropDownLinks;
+	
+	@FindBy(xpath="//li[@class='dropdown'][4]//li//a")
+	private List <WebElement> mp3PlayersNavLinkDropDownLinks;
+	
+	@FindBy(xpath="//div[@class='swiper-slide text-center swiper-slide-active']//img[@alt='iPhone 6']")
+	private WebElement iPhoneImage;
+	
+	@FindBy(xpath="//div[@class='swiper-slide text-center swiper-slide-active']//img[@alt='MacBookAir']")
+	private WebElement MacBookAirImage;
+	
+	@FindBy(xpath="//h3[normalize-space()='Featured']")
+	private WebElement featuredHeading;
+	
+	@FindBy(xpath="//div[@class='image']//img")
+	private List<WebElement> featuredImages;
 	
 	public String getPageURL() {
 		String pageURL = driver.getCurrentUrl();
@@ -94,6 +153,33 @@ public class HomePage extends BasePage {
 			return null;
 		}
 	}
+	
+	public void hoverToElement(WebElement element) {
+		Actions act = new Actions(driver);
+		act.moveToElement(element).perform();
+	}
+	
+	
+	public String getFilteredDropdownLinkText(List<WebElement> dropdownElements, String textToExclude) {
+	    List<String> linkTexts = new ArrayList<>();
+	    for (WebElement element : dropdownElements) {
+	        String text = element.getText().trim();
+	        if (!text.isEmpty() && !text.equalsIgnoreCase(textToExclude)) {
+	            linkTexts.add(text);
+	        }
+	    }
+	    return String.join(", ", linkTexts);
+	}
+	
+	public String getAttributeValues(List<WebElement> elements, String attributeName) {
+		List<String> attributeValues = new ArrayList<>();
+		for(WebElement element : elements) {
+			String value = element.getDomAttribute(attributeName);
+			attributeValues.add(value);
+		}
+		return String.join(", ", attributeValues);
+	}
+
 	
 	public boolean isLogoDisplayed() {
 		return isElementDisplayed(logoLink);
@@ -219,6 +305,121 @@ public class HomePage extends BasePage {
 		return getElementText(checkoutLabel);
 	}
 	
+	public boolean isSearchBoxDisplayed() {
+		return isElementDisplayed(searchBox);
+	}
 	
+	public boolean isSearchButtonDisplayed() {
+		return isElementDisplayed(searchButton);
+	}
+	
+	public String getSearchBarPlaceholderText() {
+		String searchBarPlaceholderText = searchBox.getDomAttribute("placeholder");
+		return searchBarPlaceholderText;
+	}
+	
+	public String getShoppingCartButtonLabelText_NoItems() {
+		return getElementText(shoppingCartButtonLabel);
+	}
+	
+	public String getDesktopNavLinkText() {
+		return getElementText(desktopsNavLink);
+	}
+	
+	public String getLaptopsNotebooksNavLinkText() {
+		return getElementText(laptopsNotebooksNavLink);
+	}
 
+	public String getComponentsNavLinkText() {
+		return getElementText(componentsNavLink);
+	}
+	
+	public String getTabletsNavLinkText() {
+		return getElementText(tabletsNavLink);
+	}
+	
+	public String getSoftwareNavLinkText() {
+		return getElementText(softwareNavLink);
+	}
+	
+	public String getPhonesPDASNavLinkText() {
+		return getElementText(phonesPDASNavLink);
+	}
+	
+	public String getCamerasNavLinkText() {
+		return getElementText(camerasNavLink);
+	}
+	
+	public String getMP3PlayersNavLinkText() {
+		return getElementText(mp3PlayersNavLink);
+	}
+	
+	public void hoverToDesktopLink() {
+		hoverToElement(desktopsNavLink);
+	}
+	
+	public void hoverToLaptopsNotebooksLink() {
+		hoverToElement(laptopsNotebooksNavLink);
+	}
+	
+	public void hoverToComponentsLink() {
+		hoverToElement(componentsNavLink);
+	}
+	
+	public void hoverToMP3PlayersLink() {
+		hoverToElement(mp3PlayersNavLink);
+	}
+	
+	public String getDesktopsDropdownNavLinkText() {
+		String desktopsDropdownNavLinkText = getFilteredDropdownLinkText(desktopsNavLinkDropDownLinks, "Desktops");
+		return desktopsDropdownNavLinkText;
+	}
+	
+	public String getLaptopNotebooksDropdownNavLinkText() {
+		String laptopNotebookNavLinkText = getFilteredDropdownLinkText(laptopsNotebooksNavLinkDropDownLinks, "Laptops & Notebooks");
+		return laptopNotebookNavLinkText;
+	}
+	
+	public String getComponentsDropdownNavLinkText() {
+		String componentsDropdownNavLinkText = getFilteredDropdownLinkText(componentsNavLinkDropDownLinks, "Components");
+		return componentsDropdownNavLinkText;
+	}
+	
+	public String getMP3DropdownNavLinkText() {
+		String MP3DropdownNavLinkText = getFilteredDropdownLinkText(mp3PlayersNavLinkDropDownLinks, "MP3 Players");
+		return MP3DropdownNavLinkText;
+	}
+	
+	public boolean isIPhoneImageDisplayed() {
+		return isElementDisplayed(iPhoneImage);
+	}
+	
+	public boolean isMacBookAirImageDisplayed() {
+		return isElementDisplayed(MacBookAirImage);
+	}
+	
+	public boolean isFeaturedHeadingDisplayed() {
+		return isElementDisplayed(featuredHeading);
+	}
+	
+	public String getFeaturedHeadingText() {
+		String featuredHeadingText = featuredHeading.getText();
+		return featuredHeadingText;
+	}
+	
+	public boolean isFeaturedImagesDisplayed() {
+		for(WebElement featuredImage : featuredImages) {
+			return isElementDisplayed(featuredImage);
+		}
+		return false;
+	}
+	
+	public String getFeaturedImagesURL() {
+		return getAttributeValues(featuredImages, "src");
+	}
+	
+	public String getFeaturedImagesTitle() {
+		return getAttributeValues(featuredImages, "title");
+	}
+	
 }

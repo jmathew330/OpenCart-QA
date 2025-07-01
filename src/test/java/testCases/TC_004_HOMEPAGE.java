@@ -11,7 +11,7 @@ public class TC_004_HOMEPAGE extends BaseClass {
 	HomePage homePage;
 	
 	@Test
-	public void testPhoneElement_HeaderUI() {
+	public void testPhoneElementVisibilityAndText_HeaderUI() {
 		homePage = new HomePage(driver);
 		Assert.assertTrue(homePage.isPhoneIconDisplayed());
 		Assert.assertTrue(homePage.isPhoneNumberLabelDisplayed());

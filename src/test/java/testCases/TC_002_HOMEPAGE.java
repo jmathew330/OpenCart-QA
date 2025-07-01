@@ -10,7 +10,7 @@ public class TC_002_HOMEPAGE extends BaseClass {
 	HomePage homePage;
 	
 	@Test
-	public void testLogo() {
+	public void testLogoVisibilityAndText() {
 		homePage = new HomePage(driver);
 		Assert.assertTrue(homePage.isLogoDisplayed());
 		Assert.assertTrue(homePage.getLogoText().contains("Qafox.com"));

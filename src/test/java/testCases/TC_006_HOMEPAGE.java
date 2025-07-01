@@ -12,7 +12,7 @@ public class TC_006_HOMEPAGE extends BaseClass {
 	
 	
 	@Test
-	public void testWishListElement_HeaderUI() {
+	public void testWishListElementVisibiityAndText_HeaderUI() {
 		homePage = new HomePage(driver);
 		Assert.assertTrue(homePage.isWishListIconDisplayed());
 		Assert.assertTrue(homePage.isWishListLabelDisplayed());

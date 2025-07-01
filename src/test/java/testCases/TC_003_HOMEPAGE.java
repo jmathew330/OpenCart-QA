@@ -10,7 +10,7 @@ public class TC_003_HOMEPAGE extends BaseClass {
 	HomePage homePage;
 	
 	@Test
-	public void testCurrencyDropDownElement_HeaderUI() {
+	public void testCurrencyDropDownElementVisibilityAndText_HeaderUI() {
 		homePage = new HomePage(driver);
 		Assert.assertTrue(homePage.isCurrencyDropDownDisplayed());
 		Assert.assertTrue(homePage.getCurrencyDropdownText().contains("Currency"));

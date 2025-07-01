@@ -11,7 +11,7 @@ public class TC_007_HOMEPAGE extends BaseClass {
 	
 	
 	@Test
-	public void testShoppingCartElement_HeaderUI() {
+	public void testShoppingCartElementVisibilityAndText_HeaderUI() {
 		homePage = new HomePage(driver);
 		Assert.assertTrue(homePage.isShoppingCartIconDisplayed());
 		Assert.assertTrue(homePage.isShoppingCartLabelDisplayed());

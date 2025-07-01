@@ -11,7 +11,7 @@ public class TC_005_HOMEPAGE extends BaseClass {
 	
 	
 	@Test
-	public void testMyAccountDropDownElement_HeaderUI() {
+	public void testMyAccountDropDownElementVisibilityAndText_HeaderUI() {
 		homePage = new HomePage(driver);
 		Assert.assertTrue(homePage.isMyAccountIconDisplayed());
 		Assert.assertTrue(homePage.isMyAccountDropDownDisplayed());

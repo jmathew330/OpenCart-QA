@@ -11,7 +11,7 @@ public class TC_008_HOMEPAGE extends BaseClass {
 	HomePage homePage;
 	
 	@Test
-	public void testCheckoutElement_HeaderUI(){
+	public void testCheckoutElementVisibilityAndText_HeaderUI(){
 		homePage = new HomePage(driver);
 		Assert.assertTrue(homePage.isCheckoutIconDisplayed());
 		Assert.assertTrue(homePage.isCheckoutLabelDisplayed());
