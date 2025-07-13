@@ -4,6 +4,8 @@ import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -17,6 +19,7 @@ public class HomePage extends BasePage {
 		super(driver);
 		this.driver = driver;
 	}
+	
 	
 	@FindBy(xpath="//a[normalize-space()='Qafox.com']")
 	private WebElement logoLink;
@@ -126,6 +129,48 @@ public class HomePage extends BasePage {
 	@FindBy(xpath="//div[@class='image']//img")
 	private List<WebElement> featuredImages;
 	
+	@FindBy(xpath="//div[@class='caption']//p[1]")
+	private List<WebElement> featuredImagesCaption;
+	
+	@FindBy(xpath="//p[@class='price']")
+	private List<WebElement> featuredImagesPrice;
+	
+	@FindBy(xpath="//span[@class='price-old']")
+	private List<WebElement> featuredImagesOldPrice;
+	
+	@FindBy(xpath="//span[@class='price-tax']")
+	private List<WebElement> featuredImagesTaxPrice;
+	
+	@FindBy(xpath="//div[@class='button-group']//button[1]")
+	private List<WebElement> featuredAddToCartButtons;
+	
+	@FindBy(xpath="//div[@class='button-group']//button[2]")
+	private List<WebElement> featuredWishListButtons;
+	
+	@FindBy(xpath="//div[@class='button-group']//button[3]")
+	private List<WebElement> featuredCompareProductButtons;
+	
+	@FindBy(xpath="//body/div[@id='common-home']/div[@class='row']/div[@id='content']/div[3]")
+	private WebElement companyLogosSection;
+	
+	@FindBy(xpath="//div[@id='carousel0']//img")
+	private List<WebElement> companyLogos;
+	
+	@FindBy(xpath="//div[@class='swiper-pagination carousel0 swiper-pagination-clickable swiper-pagination-bullets']//span[11]")
+	private WebElement lastSwiperPaginationBullet;
+	
+	@FindBy(xpath="//div[@class='swiper-button-next'][2]")
+	private WebElement swipeRightButton;
+	
+	@FindBy(xpath="//div[@class='col-sm-3']//h5")
+	private List<WebElement> footerHeadings;
+	
+	@FindBy(xpath="//div[@class='col-sm-3']//a")
+	private List<WebElement> footerHyperlinks;
+	
+	@FindBy(xpath="//footer")
+	private WebElement footer;
+	
 	public String getPageURL() {
 		String pageURL = driver.getCurrentUrl();
 		return pageURL;
@@ -138,7 +183,7 @@ public class HomePage extends BasePage {
 	
 	private boolean isElementDisplayed(WebElement element) {
 		try {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.visibilityOf(element));
 		return element.isDisplayed();
 		} catch (Exception e) {
@@ -179,6 +224,31 @@ public class HomePage extends BasePage {
 		}
 		return String.join(", ", attributeValues);
 	}
+	
+	public String getElementsText(List<WebElement> elements) {
+		List<String> elementsText = new ArrayList<>();
+		for(WebElement element : elements) {
+			String text = element.getText();
+			elementsText.add(text);
+		}
+		return String.join("; ", elementsText);
+	}
+	
+	public void scrollToElements(List<WebElement> elements) throws InterruptedException {
+		JavascriptExecutor js;
+		js = (JavascriptExecutor) driver;
+		for(WebElement element : elements) {
+			js.executeScript("arguments[0].scrollIntoView(true)", element);
+			Thread.sleep(1000);
+		}
+	}
+	
+	public void scrollToElement(WebElement element) throws InterruptedException {
+		JavascriptExecutor js;
+		js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].scrollIntoView(true)", element);
+		Thread.sleep(1000);
+		}
 
 	
 	public boolean isLogoDisplayed() {
@@ -420,6 +490,125 @@ public class HomePage extends BasePage {
 	
 	public String getFeaturedImagesTitle() {
 		return getAttributeValues(featuredImages, "title");
+	}
+	
+	public String getFeaturedImagesCaption() {
+		return getElementsText(featuredImagesCaption);
+	}
+	
+	public String getFeaturedImagesPrice() {
+		return getElementsText(featuredImagesPrice);
+	}
+	
+	public String getFeaturedImagesOldPrice() {
+		return getElementsText(featuredImagesOldPrice);
+	}
+	
+	public String getFeaturedImagesTaxPrice() {
+		return getElementsText(featuredImagesTaxPrice);
+	}
+	
+	public boolean isFeaturedImagesAddToCartButtonsDisplayed() {
+		for(WebElement featuredAddToCartButton : featuredAddToCartButtons  ) {
+			return isElementDisplayed(featuredAddToCartButton);
+		}
+		return false;
+	}
+	
+	public void scrollToFeaturedImagesAddToCartButtons() throws InterruptedException {
+		scrollToElements(featuredAddToCartButtons);
+	}
+	
+	public boolean isFeaturedWishListButtonsDisplayed() {
+		for(WebElement featuredWishListButton : featuredWishListButtons) {
+			return isElementDisplayed(featuredWishListButton);
+		}
+		return false;
+	}
+	
+	public void scrollToFeaturedWishListButtons() throws InterruptedException {
+		scrollToElements(featuredWishListButtons);
+	}
+	
+	public boolean isFeaturedCompareProductButtonsDisplayed() {
+		for(WebElement featuredCompareProductButton : featuredCompareProductButtons) {
+			return isElementDisplayed(featuredCompareProductButton);
+		}
+		return false;
+	}
+	
+	public void scrollToFeaturedCompareProductButtons() throws InterruptedException {
+		scrollToElements(featuredCompareProductButtons);
+	}
+	
+	public void scrollToCompanyLogosSwiper() throws InterruptedException {
+		scrollToElement(companyLogosSection);
+	}
+	
+	public void swipeRight() {
+	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+	    int totalBullets = 11;
+
+	    for (int i = 1; i < totalBullets; i++) {
+	        wait.until(ExpectedConditions.visibilityOf(swipeRightButton));
+	        wait.until(ExpectedConditions.elementToBeClickable(swipeRightButton));
+	        swipeRightButton.click();
+
+	        // Small pause to allow animation to complete
+	        try {
+	            Thread.sleep(500);
+	        } catch (InterruptedException e) {
+	            Thread.currentThread().interrupt();
+	        }
+
+	        WebElement lastBullet = driver.findElement(By.xpath(
+	            "//div[@class='swiper-pagination carousel0 swiper-pagination-clickable swiper-pagination-bullets']//span[" + totalBullets + "]"
+	        ));
+
+	        String classValue = lastBullet.getDomAttribute("class");
+	        if (classValue != null && classValue.contains("swiper-pagination-bullet-active")) {
+	            System.out.println("Last bullet is active, stopping swipe.");
+	            break;
+	        }
+	    }
+	}
+
+
+	
+	public boolean isCompanyLogosDisplayed() {
+		
+	    for (WebElement companyLogo : companyLogos) {
+	        if (!isElementDisplayed(companyLogo)) {
+	            return false;
+	        }
+	    }
+	    return true;
+	}
+	
+	public void scrollToFooter() throws InterruptedException {
+		scrollToElement(footer);
+	}
+	
+	public boolean isFooterHeadingsDisplayed() {
+		for(WebElement footerHeading : footerHeadings) {
+			return isElementDisplayed(footerHeading);
+		}
+		return false;
+	}
+	
+	public String getFooterHeadingsText() {
+		return getElementsText(footerHeadings);
+	}
+
+	public boolean isFooterHyperlinksDisplayed() {
+		for(WebElement footerHyperlink : footerHyperlinks) {
+			return isElementDisplayed(footerHyperlink);
+		}
+		return false;
+	}
+	
+	public String getFooterHyperlinksText() {
+		return getElementsText(footerHyperlinks);
 	}
 	
 }
