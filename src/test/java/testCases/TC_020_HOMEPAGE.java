@@ -14,7 +14,7 @@ public class TC_020_HOMEPAGE extends BaseClass {
 	HomePage homePage;
 	
 	@Test
-	public void testFooterHyperlinkVisibility() throws InterruptedException {
+	public void testFooterHyperlinksVisibility() throws InterruptedException {
 		homePage = new HomePage(driver);
 		homePage.scrollToFooter();
 		Assert.assertTrue(homePage.isFooterHyperlinksDisplayed());

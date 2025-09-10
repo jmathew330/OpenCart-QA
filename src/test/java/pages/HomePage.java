@@ -3,9 +3,11 @@ package pages;
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -84,11 +86,83 @@ public class HomePage extends BasePage {
 	@FindBy(linkText="Desktops")
 	private WebElement desktopsNavLink;
 	
+	@FindBy(xpath="//a[normalize-space()='PC (0)']")
+	private WebElement desktopsNavLink_PC;
+	
+	@FindBy(xpath="//a[normalize-space()='Mac (1)']")
+	private WebElement desktopsNavLink_Mac;
+	
+	@FindBy(xpath="//a[normalize-space()='Show AllDesktops']")
+	private WebElement desktopsNavLink_Desktops;
+	
+	@FindBy(xpath="//h2[normalize-space()='PC']")
+	private WebElement desktopsNavLink_PC_Heading;
+	
+	@FindBy(xpath="//h2[normalize-space()='Mac']")
+	private WebElement desktopsNavLink_Mac_Heading;
+	
+	@FindBy(xpath="//h2[normalize-space()='Desktops']")
+	private WebElement desktopsNavLink_Desktops_Heading;
+	
 	@FindBy(linkText="Laptops & Notebooks")
 	private WebElement laptopsNotebooksNavLink;
 	
+	@FindBy(xpath="//a[normalize-space()='Macs (0)']")
+	private WebElement laptopsNotebooksNavLink_Macs;
+	
+	@FindBy(xpath="//a[normalize-space()='Windows (0)']")
+	private WebElement laptopsNotebooksNavLink_Windows;
+	
+	@FindBy(xpath="//a[normalize-space()='Show AllLaptops & Notebooks']")
+	private WebElement laptopsNotebooksNavLink_LaptopsNotebooks;
+	
+	@FindBy(xpath="//h2[normalize-space()='Macs']")
+	private WebElement laptopsNotebooksNavLink_Macs_Heading;
+	
+	@FindBy(xpath="//h2[normalize-space()='Windows']")
+	private WebElement laptopsNotebooksNavLink_Windows_Heading;
+	
+	@FindBy(xpath="//h2[normalize-space()='Laptops & Notebooks']")
+	private WebElement laptopsNotebooksNavLink_LaptopsNotebooks_Heading;
+	
 	@FindBy(linkText="Components")
 	private WebElement componentsNavLink;
+	
+	@FindBy(xpath="//a[normalize-space()='Mice and Trackballs (0)']")
+	private WebElement componentsNavLink_MiceTrackballs;
+	
+	@FindBy(xpath="//h2[normalize-space()='Mice and Trackballs']")
+	private WebElement componentsNavLink_MiceTrackballs_Heading;
+	
+	@FindBy(xpath="//a[normalize-space()='Monitors (2)']")
+	private WebElement componentsNavLink_Monitors;
+	
+	@FindBy(xpath="//h2[normalize-space()='Monitors']")
+	private WebElement componentsNavLink_Monitors_Heading;
+	
+	@FindBy(xpath="//a[normalize-space()='Printers (0)']")
+	private WebElement componentsNavLink_Printers;
+	
+	@FindBy(xpath="//h2[normalize-space()='Printers']")
+	private WebElement componentsNavLink_Printers_Heading;
+	
+	@FindBy(xpath="//a[normalize-space()='Scanners (0)']")
+	private WebElement componentsNavLink_Scanners;
+	
+	@FindBy(xpath="//h2[normalize-space()='Scanners']")
+	private WebElement componentsNavLink_Scanners_Heading;
+	
+	@FindBy(xpath="//a[normalize-space()='Web Cameras (0)']")
+	private WebElement componentsNavLink_WebCameras;
+	
+	@FindBy(xpath="//h2[normalize-space()='Web Cameras']")
+	private WebElement componentsNavLink_WebCameras_Heading;
+	
+	@FindBy(xpath="//a[normalize-space()='Show AllComponents']")
+	private WebElement componentsNavLink_Components;
+	
+	@FindBy(xpath="//h2[normalize-space()='Components']")
+	private WebElement componentsNavLink_Components_Heading;
 	
 	@FindBy(linkText="Tablets")
 	private WebElement tabletsNavLink;
@@ -428,13 +502,174 @@ public class HomePage extends BasePage {
 		hoverToElement(desktopsNavLink);
 	}
 	
+	public void clickDesktopLink_PC() throws InterruptedException {
+		Actions act = new Actions(driver);
+		act.keyDown(Keys.COMMAND).click(desktopsNavLink_PC).keyUp(Keys.COMMAND).perform();
+		Set<String> windowHandlesSet = driver.getWindowHandles();
+		List<String> windowHandles = new ArrayList<>(windowHandlesSet);
+		driver.switchTo().window(windowHandles.get(1));
+		Thread.sleep(3000);
+	}
+	
+	public void clickDesktopLink_Mac() throws InterruptedException {
+		Actions act = new Actions(driver);
+		act.keyDown(Keys.COMMAND).click(desktopsNavLink_Mac).keyUp(Keys.COMMAND).perform();
+		Set<String> windowHandlesSet = driver.getWindowHandles();
+		List<String> windowHandles = new ArrayList<>(windowHandlesSet);
+		driver.switchTo().window(windowHandles.get(2));
+		Thread.sleep(3000);
+	}
+	
+	public void clickDesktopLink_Desktops() throws InterruptedException {
+		Actions act = new Actions(driver);
+		act.keyDown(Keys.COMMAND).click(desktopsNavLink_Desktops).keyUp(Keys.COMMAND).perform();
+		Set<String> windowHandlesSet = driver.getWindowHandles();
+		List<String> windowHandles = new ArrayList<>(windowHandlesSet);
+		driver.switchTo().window(windowHandles.get(3));
+		Thread.sleep(3000);
+	}
+
+	
+	public String getDesktopsLink_PC_HeadingText() {
+		return getElementText(desktopsNavLink_PC_Heading);
+	}
+	
+	public String getDesktopsLink_Mac_HeadingText() {
+		return getElementText(desktopsNavLink_Mac_Heading);
+	}
+	
+	public String getDesktopsLink_Desktops_HeadingText() {
+		return getElementText(desktopsNavLink_Desktops_Heading);
+	}
+	
 	public void hoverToLaptopsNotebooksLink() {
 		hoverToElement(laptopsNotebooksNavLink);
+	}
+	
+	public void clickLaptopsNotebooksLink_Macs() throws InterruptedException {
+		Actions act = new Actions(driver);
+		act.keyDown(Keys.COMMAND).click(laptopsNotebooksNavLink_Macs).keyUp(Keys.COMMAND).perform();
+		Set<String> windowHandlesSet = driver.getWindowHandles();
+		List<String> windowHandles = new ArrayList<>(windowHandlesSet);
+		driver.switchTo().window(windowHandles.get(1));
+		Thread.sleep(3000);
+	}
+	
+	public void clickLaptopsNotebooksLink_Windows() throws InterruptedException {
+		Actions act = new Actions(driver);
+		act.keyDown(Keys.COMMAND).click(laptopsNotebooksNavLink_Windows).keyUp(Keys.COMMAND).perform();
+		Set<String> windowHandlesSet = driver.getWindowHandles();
+		List<String> windowHandles = new ArrayList<>(windowHandlesSet);
+		driver.switchTo().window(windowHandles.get(2));
+		Thread.sleep(3000);
+	}
+	
+	public void clickLaptopsNotebooksLink_LaptopsNotebooks() throws InterruptedException {
+		Actions act = new Actions(driver);
+		act.keyDown(Keys.COMMAND).click(laptopsNotebooksNavLink_LaptopsNotebooks).keyUp(Keys.COMMAND).perform();
+		Set<String> windowHandlesSet = driver.getWindowHandles();
+		List<String> windowHandles = new ArrayList<>(windowHandlesSet);
+		driver.switchTo().window(windowHandles.get(3));
+		Thread.sleep(3000);
+	}
+	
+	public String getLaptopsNotebooksLink_Macs_HeadingText() {
+		return getElementText(laptopsNotebooksNavLink_Macs_Heading);
+	}
+	
+	public String getLaptopsNotebooksLink_Windows_HeadingText() {
+		return getElementText(laptopsNotebooksNavLink_Windows_Heading);
+	}
+	
+	public String getLaptopsNotebooksLink_LaptopsWindows_HeadingText() {
+		return getElementText(laptopsNotebooksNavLink_LaptopsNotebooks_Heading);
 	}
 	
 	public void hoverToComponentsLink() {
 		hoverToElement(componentsNavLink);
 	}
+	
+	public void clickComponentsLink_MiceTracksballs() throws InterruptedException{
+		Actions act = new Actions(driver);
+		act.keyDown(Keys.COMMAND).click(componentsNavLink_MiceTrackballs).keyUp(Keys.COMMAND).perform();
+		Set<String> windowsHandleSet = driver.getWindowHandles();
+		List<String> windowHandles = new ArrayList<>(windowsHandleSet);
+		driver.switchTo().window(windowHandles.get(1));
+		Thread.sleep(3000);
+	}
+	
+	public void clickComponentsLink_Monitors() throws InterruptedException{
+		Actions act = new Actions(driver);
+		act.keyDown(Keys.COMMAND).click(componentsNavLink_Monitors).keyUp(Keys.COMMAND).perform();
+		Set<String> windowsHandleSet = driver.getWindowHandles();
+		List<String> windowHandles = new ArrayList<>(windowsHandleSet);
+		driver.switchTo().window(windowHandles.get(2));
+		Thread.sleep(3000);
+	}
+	
+	public void clickComponentsLink_Printers() throws InterruptedException{
+		Actions act = new Actions(driver);
+		act.keyDown(Keys.COMMAND).click(componentsNavLink_Printers).keyUp(Keys.COMMAND).perform();
+		Set<String> windowsHandleSet = driver.getWindowHandles();
+		List<String> windowHandles = new ArrayList<>(windowsHandleSet);
+		driver.switchTo().window(windowHandles.get(3));
+		Thread.sleep(3000);
+	}
+	
+	public void clickComponentsLink_Scanners() throws InterruptedException{
+		Actions act = new Actions(driver);
+		act.keyDown(Keys.COMMAND).click(componentsNavLink_Scanners).keyUp(Keys.COMMAND).perform();
+		Set<String> windowsHandleSet = driver.getWindowHandles();
+		List<String> windowHandles = new ArrayList<>(windowsHandleSet);
+		driver.switchTo().window(windowHandles.get(4));
+		Thread.sleep(3000);
+	}
+	
+	public void clickComponentsLink_WebCameras() throws InterruptedException{
+		Actions act = new Actions(driver);
+		act.keyDown(Keys.COMMAND).click(componentsNavLink_WebCameras).keyUp(Keys.COMMAND).perform();
+		Set<String> windowsHandleSet = driver.getWindowHandles();
+		List<String> windowHandles = new ArrayList<>(windowsHandleSet);
+		driver.switchTo().window(windowHandles.get(5));
+		Thread.sleep(3000);
+	}
+	
+	
+	public void clickComponentsLink_Components() throws InterruptedException{
+		Actions act = new Actions(driver);
+		act.keyDown(Keys.COMMAND).click(componentsNavLink_Components).keyUp(Keys.COMMAND).perform();
+		Set<String> windowsHandleSet = driver.getWindowHandles();
+		List<String> windowHandles = new ArrayList<>(windowsHandleSet);
+		driver.switchTo().window(windowHandles.get(6));
+		Thread.sleep(3000);
+	}
+	
+	
+	public String getComponentsLink_MiceTrackballs_HeadingText() {
+		return getElementText(componentsNavLink_MiceTrackballs_Heading);
+	}
+	
+	public String getComponentsLink_Monitors_HeadingText() {
+		return getElementText(componentsNavLink_Monitors_Heading);
+	}
+	
+	public String getComponentsLink_Printers_HeadingText() {
+		return getElementText(componentsNavLink_Printers_Heading);
+	}
+	
+	public String getComponentsLink_Scanners_HeadingText() {
+		return getElementText(componentsNavLink_Scanners_Heading);
+	}
+	
+	public String getComponentsLink_WebCameras_HeadingText() {
+		return getElementText(componentsNavLink_WebCameras_Heading);
+	}
+	
+	public String getComponentsLink_Components_HeadingText() {
+		return getElementText(componentsNavLink_Components_Heading);
+	}
+
+
 	
 	public void hoverToMP3PlayersLink() {
 		hoverToElement(mp3PlayersNavLink);
