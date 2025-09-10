@@ -1,17 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="8" passed="8" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-09-09T21:17:34 EDT" name="Default suite" finished-at="2025-09-09T21:17:43 EDT" duration-ms="8659">
+  <suite started-at="2025-09-10T12:06:36 EDT" name="MyTestSuite" finished-at="2025-09-10T12:07:30 EDT" duration-ms="54235">
     <groups>
     </groups>
-    <test started-at="2025-09-09T21:17:34 EDT" name="Default test" finished-at="2025-09-09T21:17:43 EDT" duration-ms="8659">
-      <class name="testCases.TC_012_REGISTER">
-        <test-method is-config="true" signature="setup()[pri:0, instance:testCases.TC_012_REGISTER@b2c9a9c]" started-at="2025-09-09T21:17:34 EDT" name="setup" finished-at="2025-09-09T21:17:40 EDT" duration-ms="5114" status="PASS">
+    <test started-at="2025-09-10T12:06:36 EDT" name="RegisterPageTests" finished-at="2025-09-10T12:07:30 EDT" duration-ms="54235">
+      <class name="testCases.RegisterPage.TC_006_REGISTER">
+        <test-method is-config="true" signature="setup()[pri:0, instance:testCases.RegisterPage.TC_006_REGISTER@70325e14]" started-at="2025-09-10T12:07:14 EDT" name="setup" finished-at="2025-09-10T12:07:19 EDT" duration-ms="5184" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="testRegisterPage_ValidData(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testCases.TC_012_REGISTER@b2c9a9c]" started-at="2025-09-09T21:17:40 EDT" name="testRegisterPage_ValidData" data-provider="formData" finished-at="2025-09-09T21:17:43 EDT" duration-ms="3242" status="PASS">
+        <test-method signature="testRegisterPageForm_NoData_Agree_SubscriptionYes()[pri:0, instance:testCases.RegisterPage.TC_006_REGISTER@70325e14]" started-at="2025-09-10T12:07:19 EDT" name="testRegisterPageForm_NoData_Agree_SubscriptionYes" finished-at="2025-09-10T12:07:21 EDT" duration-ms="2106" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRegisterPageForm_NoData_Agree_SubscriptionYes -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.RegisterPage.TC_006_REGISTER@70325e14]" started-at="2025-09-10T12:07:21 EDT" name="tearDown" finished-at="2025-09-10T12:07:22 EDT" duration-ms="197" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- testCases.RegisterPage.TC_006_REGISTER -->
+      <class name="testCases.RegisterPage.TC_004_REGISTER">
+        <test-method is-config="true" signature="setup()[pri:0, instance:testCases.RegisterPage.TC_004_REGISTER@2df3b89c]" started-at="2025-09-10T12:06:59 EDT" name="setup" finished-at="2025-09-10T12:07:05 EDT" duration-ms="5852" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testRegisterPageForm_NoData_Agree()[pri:0, instance:testCases.RegisterPage.TC_004_REGISTER@2df3b89c]" started-at="2025-09-10T12:07:05 EDT" name="testRegisterPageForm_NoData_Agree" finished-at="2025-09-10T12:07:07 EDT" duration-ms="2450" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRegisterPageForm_NoData_Agree -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.RegisterPage.TC_004_REGISTER@2df3b89c]" started-at="2025-09-10T12:07:07 EDT" name="tearDown" finished-at="2025-09-10T12:07:07 EDT" duration-ms="188" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- testCases.RegisterPage.TC_004_REGISTER -->
+      <class name="testCases.RegisterPage.TC_002_REGISTER">
+        <test-method is-config="true" signature="setup()[pri:0, instance:testCases.RegisterPage.TC_002_REGISTER@55b0dcab]" started-at="2025-09-10T12:06:44 EDT" name="setup" finished-at="2025-09-10T12:06:49 EDT" duration-ms="4892" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testRegisterPageHeading()[pri:0, instance:testCases.RegisterPage.TC_002_REGISTER@55b0dcab]" started-at="2025-09-10T12:06:49 EDT" name="testRegisterPageHeading" finished-at="2025-09-10T12:06:51 EDT" duration-ms="1593" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRegisterPageHeading -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.RegisterPage.TC_002_REGISTER@55b0dcab]" started-at="2025-09-10T12:06:51 EDT" name="tearDown" finished-at="2025-09-10T12:06:51 EDT" duration-ms="194" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- testCases.RegisterPage.TC_002_REGISTER -->
+      <class name="testCases.RegisterPage.TC_012_REGISTER">
+        <test-method is-config="true" signature="setup()[pri:0, instance:testCases.RegisterPage.TC_012_REGISTER@37ceb1df]" started-at="2025-09-10T12:07:22 EDT" name="setup" finished-at="2025-09-10T12:07:27 EDT" duration-ms="5209" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testRegisterPage_ValidData(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testCases.RegisterPage.TC_012_REGISTER@37ceb1df]" started-at="2025-09-10T12:07:27 EDT" name="testRegisterPage_ValidData" data-provider="formData" finished-at="2025-09-10T12:07:30 EDT" duration-ms="3219" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -25,7 +67,7 @@
             </param>
             <param index="2">
               <value>
-                <![CDATA[userf3a3785d@mail.com]]>
+                <![CDATA[user126c3e76@mail.com]]>
               </value>
             </param>
             <param index="3">
@@ -47,11 +89,57 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testRegisterPage_ValidData -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.TC_012_REGISTER@b2c9a9c]" started-at="2025-09-09T21:17:43 EDT" name="tearDown" finished-at="2025-09-09T21:17:43 EDT" duration-ms="227" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.RegisterPage.TC_012_REGISTER@37ceb1df]" started-at="2025-09-10T12:07:30 EDT" name="tearDown" finished-at="2025-09-10T12:07:30 EDT" duration-ms="304" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- testCases.TC_012_REGISTER -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- testCases.RegisterPage.TC_012_REGISTER -->
+      <class name="testCases.RegisterPage.TC_005_REGISTER">
+        <test-method is-config="true" signature="setup()[pri:0, instance:testCases.RegisterPage.TC_005_REGISTER@23348b5d]" started-at="2025-09-10T12:07:07 EDT" name="setup" finished-at="2025-09-10T12:07:12 EDT" duration-ms="4684" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testRegisterPageForm_NoData_NoAgree_SubscriptionYes()[pri:0, instance:testCases.RegisterPage.TC_005_REGISTER@23348b5d]" started-at="2025-09-10T12:07:12 EDT" name="testRegisterPageForm_NoData_NoAgree_SubscriptionYes" finished-at="2025-09-10T12:07:14 EDT" duration-ms="1981" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRegisterPageForm_NoData_NoAgree_SubscriptionYes -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.RegisterPage.TC_005_REGISTER@23348b5d]" started-at="2025-09-10T12:07:14 EDT" name="tearDown" finished-at="2025-09-10T12:07:14 EDT" duration-ms="210" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- testCases.RegisterPage.TC_005_REGISTER -->
+      <class name="testCases.RegisterPage.TC_001_REGISTER">
+        <test-method is-config="true" signature="setup()[pri:0, instance:testCases.RegisterPage.TC_001_REGISTER@7d20d0b]" started-at="2025-09-10T12:06:36 EDT" name="setup" finished-at="2025-09-10T12:06:42 EDT" duration-ms="6026" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testRegisterPageTitle()[pri:0, instance:testCases.RegisterPage.TC_001_REGISTER@7d20d0b]" started-at="2025-09-10T12:06:42 EDT" name="testRegisterPageTitle" finished-at="2025-09-10T12:06:44 EDT" duration-ms="1186" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRegisterPageTitle -->
+        <test-method signature="testRegisterPageURL()[pri:0, instance:testCases.RegisterPage.TC_001_REGISTER@7d20d0b]" started-at="2025-09-10T12:06:44 EDT" name="testRegisterPageURL" finished-at="2025-09-10T12:06:44 EDT" duration-ms="348" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRegisterPageURL -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.RegisterPage.TC_001_REGISTER@7d20d0b]" started-at="2025-09-10T12:06:44 EDT" name="tearDown" finished-at="2025-09-10T12:06:44 EDT" duration-ms="241" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- testCases.RegisterPage.TC_001_REGISTER -->
+      <class name="testCases.RegisterPage.TC_003_REGISTER">
+        <test-method is-config="true" signature="setup()[pri:0, instance:testCases.RegisterPage.TC_003_REGISTER@38afe297]" started-at="2025-09-10T12:06:51 EDT" name="setup" finished-at="2025-09-10T12:06:56 EDT" duration-ms="5349" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testRegisterPageForm_NoData_NoAgree()[pri:0, instance:testCases.RegisterPage.TC_003_REGISTER@38afe297]" started-at="2025-09-10T12:06:56 EDT" name="testRegisterPageForm_NoData_NoAgree" finished-at="2025-09-10T12:06:58 EDT" duration-ms="2163" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRegisterPageForm_NoData_NoAgree -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.RegisterPage.TC_003_REGISTER@38afe297]" started-at="2025-09-10T12:06:58 EDT" name="tearDown" finished-at="2025-09-10T12:06:59 EDT" duration-ms="245" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- testCases.RegisterPage.TC_003_REGISTER -->
+    </test> <!-- RegisterPageTests -->
+  </suite> <!-- MyTestSuite -->
 </testng-results>

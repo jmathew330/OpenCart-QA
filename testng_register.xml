@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="MyTestSuite">
+	<listeners>
+		<listener class-name="testCases.RegisterPage.ExtentReportManager"></listener>
+	</listeners>
+        <test name="RegisterPageTests">
+    	<classes>
+        	<class name="testCases.RegisterPage.TC_001_REGISTER" />
+        	<class name="testCases.RegisterPage.TC_002_REGISTER" />
+        	<class name="testCases.RegisterPage.TC_003_REGISTER" />
+        	<class name="testCases.RegisterPage.TC_004_REGISTER" />
+        	<class name="testCases.RegisterPage.TC_005_REGISTER" />
+        	<class name="testCases.RegisterPage.TC_006_REGISTER" />
+        	<class name="testCases.RegisterPage.TC_012_REGISTER" />
+       	</classes>
+    </test>
+</suite>
