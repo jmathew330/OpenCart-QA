@@ -1,15 +1,18 @@
 package pages;
 
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.NoSuchElementException;
 import java.util.Set;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class RegisterPage extends BasePage {
 	
@@ -101,20 +104,50 @@ public class RegisterPage extends BasePage {
 		return getElementText(firstNameValidationMessage);
 	}
 	
+	public boolean isElementDisplayed(WebElement element) {
+	    try {
+	        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+	        wait.until(ExpectedConditions.visibilityOf(element));
+	        return element.isDisplayed();
+	    } catch (NoSuchElementException e) {
+	        return false;
+	    }
+	}
+	
+	public boolean isFirstNameValidationMessageDisplayed() {
+		return isElementDisplayed(firstNameValidationMessage);
+	}
+	
 	public String getlastNameValidationMessageText() {
 		return getElementText(lastNameValidationMessage);
+	}
+	
+	public boolean isLastNameValidationMessageDisplayed() {
+		return isElementDisplayed(lastNameValidationMessage);
 	}
 	
 	public String getEmailValidationMessageText() {
 		return getElementText(emailValidationMessage);
 	}
 	
+	public boolean isEmailValidationMessageDisplayed() {
+		return isElementDisplayed(emailValidationMessage);
+	}
+	
 	public String getPhoneValidationMessageText() {
 		return getElementText(phoneValidationMessage);
 	}
 	
+	public boolean isPhoneValidationMessageDisplayed() {
+		return isElementDisplayed(phoneValidationMessage);
+	}
+	
 	public String getPasswordValidationMessageText() {
 		return getElementText(passwordValidationMessage);
+	}
+	
+	public boolean isPasswordValidationMessageDisplayed() {
+		return isElementDisplayed(passwordValidationMessage);
 	}
 	
 	public void selectSubscriptionYes() {

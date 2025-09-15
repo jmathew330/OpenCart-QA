@@ -13,7 +13,7 @@ public class TC_012_REGISTER extends BaseClass {
 	
 	
 	@Test(dataProvider="formData")
-	public void testRegisterPage_ValidData(String firstName, String lastName, String email, String telephone, String password, String passwordConfirm) throws InterruptedException {
+	public void testRegisterPageForm_ValidData(String firstName, String lastName, String email, String telephone, String password, String passwordConfirm) throws InterruptedException {
 		registerPage = new RegisterPage(driver);
 		registerPage.clickRegisterLink();
 		registerPage.fillOutForm(firstName, lastName, email, telephone, password, passwordConfirm);

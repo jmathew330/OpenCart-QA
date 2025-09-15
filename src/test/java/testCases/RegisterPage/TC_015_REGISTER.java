@@ -1,6 +1,7 @@
 package testCases.RegisterPage;
 
 import java.util.UUID;
+import java.util.concurrent.TimeoutException;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -8,19 +9,18 @@ import org.testng.annotations.Test;
 import pages.RegisterPage;
 import testBase.BaseClass;
 
-public class TC_014_REGISTER extends BaseClass {
+public class TC_015_REGISTER extends BaseClass {
 	
 	RegisterPage registerPage;
 	
-	
 	@Test
-	public void testRegisterPageForm_UnmatchingPasswords() throws InterruptedException {
+	public void testRegisterPageForm_ExceedCharLimit_FirstName() throws InterruptedException, TimeoutException{
 		registerPage = new RegisterPage(driver);
 		registerPage.clickRegisterLink();
-		registerPage.fillOutForm("Test", "User", generateRandomEmail(), "123456789", "pass123", "pass");
+		registerPage.fillOutForm("Longusernamelongusernamelongusername", "Last Name", generateRandomEmail(), "123456789", "pass123", "pass123");
 		registerPage.agreeToPrivacyPolicy();
 		registerPage.clickContinueBtn();
-		Assert.assertTrue(registerPage.getPasswordUnmatchingMessageText().contains("Password confirmation does not match password!"));
+		Assert.assertTrue(registerPage.isFirstNameValidationMessageDisplayed());
 	}
 	
 	

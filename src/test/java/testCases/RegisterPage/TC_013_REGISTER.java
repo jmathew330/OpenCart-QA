@@ -13,7 +13,7 @@ public class TC_013_REGISTER extends BaseClass {
 	
 	
 	@Test
-	public void testRegisterPage_DuplicateEmail() throws InterruptedException {
+	public void testRegisterPageForm_ExistingEmail() throws InterruptedException {
 		registerPage = new RegisterPage(driver);
 		registerPage.clickRegisterLink();
 		registerPage.fillOutForm("Test", "User", "testuser123@gmail.com", "123456789", "pass123", "pass123");
