@@ -54,6 +54,10 @@ public class RegisterPage extends BasePage {
 	
 	@FindBy(xpath="//h1[normalize-space()='Your Account Has Been Created!']") WebElement registerSuccessMessage;
 	
+	@FindBy(xpath="//div[@class='alert alert-danger alert-dismissible']") WebElement registerEmailExistsMessage;
+	
+	@FindBy(xpath="//div[contains(text(),'Password confirmation does not match password!')]") WebElement passwordUnmatchingMessage;
+	
 	
 	public void clickRegisterLink() throws InterruptedException {
 		WebElement myAccountNavLink = driver.findElement(By.xpath("//a[@title='My Account']"));
@@ -132,6 +136,14 @@ public class RegisterPage extends BasePage {
 	
 	public String getRegisterSuccessMessageText() {
 		return getElementText(registerSuccessMessage);
+	}
+	
+	public String getRegisterEmailExistsText() {
+		return getElementText(registerEmailExistsMessage);
+	}
+	
+	public String getPasswordUnmatchingMessageText() {
+		return getElementText(passwordUnmatchingMessage);
 	}
 
 	
