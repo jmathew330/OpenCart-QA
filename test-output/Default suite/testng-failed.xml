@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testCases.RegisterPage.TC_015_REGISTER">
+      <class name="testCases.RegisterPage.TC_020_REGISTER">
         <methods>
           <include name="tearDown"/>
+          <include name="testRegisterForm_ExceedCharLimit_Password"/>
           <include name="setup"/>
-          <include name="testRegisterPageForm_ExceedCharLimit_FirstName"/>
         </methods>
-      </class> <!-- testCases.RegisterPage.TC_015_REGISTER -->
+      </class> <!-- testCases.RegisterPage.TC_020_REGISTER -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
