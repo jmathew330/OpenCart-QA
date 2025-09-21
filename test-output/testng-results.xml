@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-09-17T14:06:16 EDT" name="Default suite" finished-at="2025-09-17T14:06:25 EDT" duration-ms="9284">
+  <suite started-at="2025-09-17T19:18:10 EDT" name="Default suite" finished-at="2025-09-17T19:18:18 EDT" duration-ms="8093">
     <groups>
     </groups>
-    <test started-at="2025-09-17T14:06:16 EDT" name="Default test" finished-at="2025-09-17T14:06:25 EDT" duration-ms="9284">
-      <class name="testCases.LoginPage.TC_001_LOGIN">
-        <test-method is-config="true" signature="setup()[pri:0, instance:testCases.LoginPage.TC_001_LOGIN@367ffa75]" started-at="2025-09-17T14:06:16 EDT" name="setup" finished-at="2025-09-17T14:06:22 EDT" duration-ms="6644" status="PASS">
+    <test started-at="2025-09-17T19:18:10 EDT" name="Default test" finished-at="2025-09-17T19:18:18 EDT" duration-ms="8093">
+      <class name="testCases.LoginPage.TC_002_LOGIN">
+        <test-method is-config="true" signature="setup()[pri:0, instance:testCases.LoginPage.TC_002_LOGIN@367ffa75]" started-at="2025-09-17T19:18:10 EDT" name="setup" finished-at="2025-09-17T19:18:16 EDT" duration-ms="6065" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="testLogin_EmptyData()[pri:0, instance:testCases.LoginPage.TC_001_LOGIN@367ffa75]" started-at="2025-09-17T14:06:22 EDT" name="testLogin_EmptyData" finished-at="2025-09-17T14:06:25 EDT" duration-ms="2324" status="PASS">
+        <test-method signature="testLogin_NoAccountMessage()[pri:0, instance:testCases.LoginPage.TC_002_LOGIN@367ffa75]" started-at="2025-09-17T19:18:16 EDT" name="testLogin_NoAccountMessage" finished-at="2025-09-17T19:18:18 EDT" duration-ms="1737" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testLogin_EmptyData -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.LoginPage.TC_001_LOGIN@367ffa75]" started-at="2025-09-17T14:06:25 EDT" name="tearDown" finished-at="2025-09-17T14:06:25 EDT" duration-ms="216" status="PASS">
+        </test-method> <!-- testLogin_NoAccountMessage -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.LoginPage.TC_002_LOGIN@367ffa75]" started-at="2025-09-17T19:18:18 EDT" name="tearDown" finished-at="2025-09-17T19:18:18 EDT" duration-ms="222" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- testCases.LoginPage.TC_001_LOGIN -->
+      </class> <!-- testCases.LoginPage.TC_002_LOGIN -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
