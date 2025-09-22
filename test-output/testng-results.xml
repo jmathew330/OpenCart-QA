@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-09-17T19:18:10 EDT" name="Default suite" finished-at="2025-09-17T19:18:18 EDT" duration-ms="8093">
+  <suite started-at="2025-09-22T13:58:50 EDT" name="Default suite" finished-at="2025-09-22T13:58:58 EDT" duration-ms="8055">
     <groups>
     </groups>
-    <test started-at="2025-09-17T19:18:10 EDT" name="Default test" finished-at="2025-09-17T19:18:18 EDT" duration-ms="8093">
-      <class name="testCases.LoginPage.TC_002_LOGIN">
-        <test-method is-config="true" signature="setup()[pri:0, instance:testCases.LoginPage.TC_002_LOGIN@367ffa75]" started-at="2025-09-17T19:18:10 EDT" name="setup" finished-at="2025-09-17T19:18:16 EDT" duration-ms="6065" status="PASS">
+    <test started-at="2025-09-22T13:58:50 EDT" name="Default test" finished-at="2025-09-22T13:58:58 EDT" duration-ms="8055">
+      <class name="testCases.RegisterPage.TC_001_REGISTER">
+        <test-method is-config="true" signature="setup()[pri:0, instance:testCases.RegisterPage.TC_001_REGISTER@49438269]" started-at="2025-09-22T13:58:50 EDT" name="setup" finished-at="2025-09-22T13:58:56 EDT" duration-ms="6251" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="testLogin_NoAccountMessage()[pri:0, instance:testCases.LoginPage.TC_002_LOGIN@367ffa75]" started-at="2025-09-17T19:18:16 EDT" name="testLogin_NoAccountMessage" finished-at="2025-09-17T19:18:18 EDT" duration-ms="1737" status="PASS">
+        <test-method signature="testRegisterPageURL()[pri:0, instance:testCases.RegisterPage.TC_001_REGISTER@49438269]" started-at="2025-09-22T13:58:56 EDT" name="testRegisterPageURL" finished-at="2025-09-22T13:58:58 EDT" duration-ms="1455" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testLogin_NoAccountMessage -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.LoginPage.TC_002_LOGIN@367ffa75]" started-at="2025-09-17T19:18:18 EDT" name="tearDown" finished-at="2025-09-17T19:18:18 EDT" duration-ms="222" status="PASS">
+        </test-method> <!-- testRegisterPageURL -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.RegisterPage.TC_001_REGISTER@49438269]" started-at="2025-09-22T13:58:58 EDT" name="tearDown" finished-at="2025-09-22T13:58:58 EDT" duration-ms="235" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- testCases.LoginPage.TC_002_LOGIN -->
+      </class> <!-- testCases.RegisterPage.TC_001_REGISTER -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

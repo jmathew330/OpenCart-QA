@@ -1,0 +1,2030 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <meta charset='utf-8'>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports1.css" rel="stylesheet" id="ultra" />
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" id="retro" disabled="false"/>
+    <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
+      <br/>
+      <span class="top-banner-font-1">2 suites, 1 failed test</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" title="Collapse/expand all the suites" class="collapse-all-link">
+          <img src="collapseall.gif" class="collapse-all-icon">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" panel-name="suite-MyTestSuite" class="navigator-link">
+              <span class="suite-name border-failed">MyTestSuite</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" panel-name="test-xml-MyTestSuite" class="navigator-link ">
+                    <span>testng_homepage.xml</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="testlist-MyTestSuite" class="navigator-link ">
+                    <span class="test-stats">1 test</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="group-MyTestSuite" class="navigator-link ">
+                    <span>0 groups</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="times-MyTestSuite" class="navigator-link ">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="reporter-MyTestSuite" class="navigator-link ">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="ignored-methods-MyTestSuite" class="navigator-link ">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="chronological-MyTestSuite" class="navigator-link ">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">45 methods, 1 failed,   44 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-MyTestSuite" class="hide-methods failed suite-MyTestSuite"> (hide)</a> <!-- hide-methods failed suite-MyTestSuite -->
+                      <a href="#" panel-name="suite-MyTestSuite" class="show-methods failed suite-MyTestSuite"> (show)</a> <!-- show-methods failed suite-MyTestSuite -->
+                    </span>
+                    <div class="method-list-content failed suite-MyTestSuite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MyTestSuite" title="testCases.Homepage.TC_014_HOMEPAGE" class="method navigator-link" hash-for-method="testImageGalleryPicturesVisibility_iPhone">testImageGalleryPicturesVisibility_iPhone</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-MyTestSuite -->
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-MyTestSuite" class="hide-methods passed suite-MyTestSuite"> (hide)</a> <!-- hide-methods passed suite-MyTestSuite -->
+                      <a href="#" panel-name="suite-MyTestSuite" class="show-methods passed suite-MyTestSuite"> (show)</a> <!-- show-methods passed suite-MyTestSuite -->
+                    </span>
+                    <div class="method-list-content passed suite-MyTestSuite">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MyTestSuite" title="testCases.Homepage.TC_008_HOMEPAGE" class="method navigator-link" hash-for-method="testCheckoutElementVisibilityAndText_HeaderUI">testCheckoutElementVisibilityAndText_HeaderUI</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MyTestSuite" title="testCases.Homepage.TC_023_HOMEPAGE" class="method navigator-link" hash-for-method="testComponentsMenuPageRedirection_Components">testComponentsMenuPageRedirection_Components</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MyTestSuite" title="testCases.Homepage.TC_023_HOMEPAGE" class="method navigator-link" hash-for-method="testComponentsMenuPageRedirection_MiceTrackballs">testComponentsMenuPageRedirection_MiceTrackballs</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MyTestSuite" title="testCases.Homepage.TC_023_HOMEPAGE" class="method navigator-link" hash-for-method="testComponentsMenuPageRedirection_Monitors">testComponentsMenuPageRedirection_Monitors</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MyTestSuite" title="testCases.Homepage.TC_023_HOMEPAGE" class="method navigator-link" hash-for-method="testComponentsMenuPageRedirection_Printers">testComponentsMenuPageRedirection_Printers</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MyTestSuite" title="testCases.Homepage.TC_023_HOMEPAGE" class="method navigator-link" hash-for-method="testComponentsMenuPageRedirection_Scanners">testComponentsMenuPageRedirection_Scanners</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MyTestSuite" title="testCases.Homepage.TC_023_HOMEPAGE" class="method navigator-link" hash-for-method="testComponentsMenuPageRedirection_WebCameras">testComponentsMenuPageRedirection_WebCameras</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MyTestSuite" title="testCases.Homepage.TC_003_HOMEPAGE" class="method navigator-link" hash-for-method="testCurrencyDropDownElementVisibilityAndText_HeaderUI">testCurrencyDropDownElementVisibilityAndText_HeaderUI</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MyTestSuite" title="testCases.Homepage.TC_021_HOMEPAGE" class="method navigator-link" hash-for-method="testDesktopsMenuPageRedirection_Desktops">testDesktopsMenuPageRedirection_Desktops</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MyTestSuite" title="testCases.Homepage.TC_021_HOMEPAGE" class="method navigator-link" hash-for-method="testDesktopsMenuPageRedirection_Mac">testDesktopsMenuPageRedirection_Mac</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MyTestSuite" title="testCases.Homepage.TC_021_HOMEPAGE" class="method navigator-link" hash-for-method="testDesktopsMenuPageRedirection_PC">testDesktopsMenuPageRedirection_PC</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MyTestSuite" title="testCases.Homepage.TC_017_HOMEPAGE" class="method navigator-link" hash-for-method="testFeaturedAddToCartButtonVisibility">testFeaturedAddToCartButtonVisibility</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MyTestSuite" title="testCases.Homepage.TC_017_HOMEPAGE" class="method navigator-link" hash-for-method="testFeaturedAddToWishListButtonVisibility">testFeaturedAddToWishListButtonVisibility</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MyTestSuite" title="testCases.Homepage.TC_017_HOMEPAGE" class="method navigator-link" hash-for-method="testFeaturedCompareThisProductButtonVisibility">testFeaturedCompareThisProductButtonVisibility</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MyTestSuite" title="testCases.Homepage.TC_015_HOMEPAGE" class="method navigator-link" hash-for-method="testFeaturedHeadingVisibilityAndText">testFeaturedHeadingVisibilityAndText</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MyTestSuite" title="testCases.Homepage.TC_016_HOMEPAGE" class="method navigator-link" hash-for-method="testFeaturedSectionElementsVisibility_Images">testFeaturedSectionElementsVisibility_Images</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MyTestSuite" title="testCases.Homepage.TC_016_HOMEPAGE" class="method navigator-link" hash-for-method="testFeaturedSectionElements_Images_Caption">testFeaturedSectionElements_Images_Caption</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MyTestSuite" title="testCases.Homepage.TC_016_HOMEPAGE" class="method navigator-link" hash-for-method="testFeaturedSectionElements_Images_OldPrice">testFeaturedSectionElements_Images_OldPrice</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MyTestSuite" title="testCases.Homepage.TC_016_HOMEPAGE" class="method navigator-link" hash-for-method="testFeaturedSectionElements_Images_Price">testFeaturedSectionElements_Images_Price</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MyTestSuite" title="testCases.Homepage.TC_016_HOMEPAGE" class="method navigator-link" hash-for-method="testFeaturedSectionElements_Images_TaxPrice">testFeaturedSectionElements_Images_TaxPrice</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MyTestSuite" title="testCases.Homepage.TC_016_HOMEPAGE" class="method navigator-link" hash-for-method="testFeaturedSectionElements_Images_Title">testFeaturedSectionElements_Images_Title</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MyTestSuite" title="testCases.Homepage.TC_016_HOMEPAGE" class="method navigator-link" hash-for-method="testFeaturedSectionElements_Images_URL">testFeaturedSectionElements_Images_URL</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MyTestSuite" title="testCases.Homepage.TC_019_HOMEPAGE" class="method navigator-link" hash-for-method="testFooterHeadingsText">testFooterHeadingsText</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MyTestSuite" title="testCases.Homepage.TC_019_HOMEPAGE" class="method navigator-link" hash-for-method="testFooterHeadingsVisibility">testFooterHeadingsVisibility</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MyTestSuite" title="testCases.Homepage.TC_020_HOMEPAGE" class="method navigator-link" hash-for-method="testFooterHyperlinksText">testFooterHyperlinksText</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MyTestSuite" title="testCases.Homepage.TC_020_HOMEPAGE" class="method navigator-link" hash-for-method="testFooterHyperlinksVisibility">testFooterHyperlinksVisibility</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MyTestSuite" title="testCases.Homepage.TC_014_HOMEPAGE" class="method navigator-link" hash-for-method="testImageGalleryPicturesVisibility_MacBookAir">testImageGalleryPicturesVisibility_MacBookAir</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MyTestSuite" title="testCases.Homepage.TC_022_HOMEPAGE" class="method navigator-link" hash-for-method="testLaptopsNotebooksMenuPageRedirection_LaptopsNotebooks">testLaptopsNotebooksMenuPageRedirection_LaptopsNotebooks</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MyTestSuite" title="testCases.Homepage.TC_022_HOMEPAGE" class="method navigator-link" hash-for-method="testLaptopsNotebooksMenuPageRedirection_Macs">testLaptopsNotebooksMenuPageRedirection_Macs</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MyTestSuite" title="testCases.Homepage.TC_022_HOMEPAGE" class="method navigator-link" hash-for-method="testLaptopsNotebooksMenuPageRedirection_Windows">testLaptopsNotebooksMenuPageRedirection_Windows</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MyTestSuite" title="testCases.Homepage.TC_002_HOMEPAGE" class="method navigator-link" hash-for-method="testLogoVisibilityAndText">testLogoVisibilityAndText</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MyTestSuite" title="testCases.Homepage.TC_005_HOMEPAGE" class="method navigator-link" hash-for-method="testMyAccountDropDownElementVisibilityAndText_HeaderUI">testMyAccountDropDownElementVisibilityAndText_HeaderUI</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MyTestSuite" title="testCases.Homepage.TC_013_HOMEPAGE" class="method navigator-link" hash-for-method="testNavDropdownLinksVisibility_Components_HeaderUI">testNavDropdownLinksVisibility_Components_HeaderUI</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MyTestSuite" title="testCases.Homepage.TC_013_HOMEPAGE" class="method navigator-link" hash-for-method="testNavDropdownLinksVisibility_Desktops_HeaderUI">testNavDropdownLinksVisibility_Desktops_HeaderUI</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MyTestSuite" title="testCases.Homepage.TC_013_HOMEPAGE" class="method navigator-link" hash-for-method="testNavDropdownLinksVisibility_LaptopsNotebooks_HeaderUI">testNavDropdownLinksVisibility_LaptopsNotebooks_HeaderUI</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MyTestSuite" title="testCases.Homepage.TC_013_HOMEPAGE" class="method navigator-link" hash-for-method="testNavDropdownLinksVisibility_MP3Players_HeaderUI">testNavDropdownLinksVisibility_MP3Players_HeaderUI</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MyTestSuite" title="testCases.Homepage.TC_012_HOMEPAGE" class="method navigator-link" hash-for-method="testNavLinksTextVisibility">testNavLinksTextVisibility</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MyTestSuite" title="testCases.Homepage.TC_001_HOMEPAGE" class="method navigator-link" hash-for-method="testPageURLTitle">testPageURLTitle</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MyTestSuite" title="testCases.Homepage.TC_004_HOMEPAGE" class="method navigator-link" hash-for-method="testPhoneElementVisibilityAndText_HeaderUI">testPhoneElementVisibilityAndText_HeaderUI</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MyTestSuite" title="testCases.Homepage.TC_010_HOMEPAGE" class="method navigator-link" hash-for-method="testSearchBarPlaceholderTextVisibility_HeaderUI">testSearchBarPlaceholderTextVisibility_HeaderUI</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MyTestSuite" title="testCases.Homepage.TC_009_HOMEPAGE" class="method navigator-link" hash-for-method="testSearchBarVisibility_HeaderUI">testSearchBarVisibility_HeaderUI</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MyTestSuite" title="testCases.Homepage.TC_011_HOMEPAGE" class="method navigator-link" hash-for-method="testShoppingCartButtonLabelTextVisibility_NoItems_Header_UI">testShoppingCartButtonLabelTextVisibility_NoItems_Header_UI</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MyTestSuite" title="testCases.Homepage.TC_007_HOMEPAGE" class="method navigator-link" hash-for-method="testShoppingCartElementVisibilityAndText_HeaderUI">testShoppingCartElementVisibilityAndText_HeaderUI</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MyTestSuite" title="testCases.Homepage.TC_006_HOMEPAGE" class="method navigator-link" hash-for-method="testWishListElementVisibiityAndText_HeaderUI">testWishListElementVisibiityAndText_HeaderUI</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-MyTestSuite -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" panel-name="suite-MyTestSuite__0_" class="navigator-link">
+              <span class="suite-name border-passed">MyTestSuite (0)</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" panel-name="test-xml-MyTestSuite__0_" class="navigator-link ">
+                    <span>testng_register.xml</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="testlist-MyTestSuite__0_" class="navigator-link ">
+                    <span class="test-stats">1 test</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="group-MyTestSuite__0_" class="navigator-link ">
+                    <span>0 groups</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="times-MyTestSuite__0_" class="navigator-link ">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="reporter-MyTestSuite__0_" class="navigator-link ">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="ignored-methods-MyTestSuite__0_" class="navigator-link ">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="chronological-MyTestSuite__0_" class="navigator-link ">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">8 methods,   8 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-MyTestSuite__0_" class="hide-methods passed suite-MyTestSuite__0_"> (hide)</a> <!-- hide-methods passed suite-MyTestSuite__0_ -->
+                      <a href="#" panel-name="suite-MyTestSuite__0_" class="show-methods passed suite-MyTestSuite__0_"> (show)</a> <!-- show-methods passed suite-MyTestSuite__0_ -->
+                    </span>
+                    <div class="method-list-content passed suite-MyTestSuite__0_">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MyTestSuite__0_" title="testCases.RegisterPage.TC_004_REGISTER" class="method navigator-link" hash-for-method="testRegisterPageForm_NoData_Agree">testRegisterPageForm_NoData_Agree</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MyTestSuite__0_" title="testCases.RegisterPage.TC_006_REGISTER" class="method navigator-link" hash-for-method="testRegisterPageForm_NoData_Agree_SubscriptionYes">testRegisterPageForm_NoData_Agree_SubscriptionYes</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MyTestSuite__0_" title="testCases.RegisterPage.TC_003_REGISTER" class="method navigator-link" hash-for-method="testRegisterPageForm_NoData_NoAgree">testRegisterPageForm_NoData_NoAgree</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MyTestSuite__0_" title="testCases.RegisterPage.TC_005_REGISTER" class="method navigator-link" hash-for-method="testRegisterPageForm_NoData_NoAgree_SubscriptionYes">testRegisterPageForm_NoData_NoAgree_SubscriptionYes</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MyTestSuite__0_" title="testCases.RegisterPage.TC_012_REGISTER" class="method navigator-link" hash-for-method="testRegisterPageForm_ValidData(Test, User, user25e11e25@mail.com, 1234567890, pass123, pass123)">testRegisterPageForm_ValidData(Test, User, user25e11e25@mail.com, 1234567890, pass123, pass123)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MyTestSuite__0_" title="testCases.RegisterPage.TC_002_REGISTER" class="method navigator-link" hash-for-method="testRegisterPageHeading">testRegisterPageHeading</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MyTestSuite__0_" title="testCases.RegisterPage.TC_001_REGISTER" class="method navigator-link" hash-for-method="testRegisterPageTitle">testRegisterPageTitle</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MyTestSuite__0_" title="testCases.RegisterPage.TC_001_REGISTER" class="method navigator-link" hash-for-method="testRegisterPageURL">testRegisterPageURL</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-MyTestSuite__0_ -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-MyTestSuite" class="panel MyTestSuite">
+          <div class="suite-MyTestSuite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">testCases.Homepage.TC_014_HOMEPAGE</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testImageGalleryPicturesVisibility_iPhone">
+                  </a> <!-- testImageGalleryPicturesVisibility_iPhone -->
+                  <span class="method-name">testImageGalleryPicturesVisibility_iPhone</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
+	at testCases.Homepage.TC_014_HOMEPAGE.testImageGalleryPicturesVisibility_iPhone(TC_014_HOMEPAGE.java:15)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 33 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-MyTestSuite-class-failed -->
+          <div class="suite-MyTestSuite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testCases.Homepage.TC_022_HOMEPAGE</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testLaptopsNotebooksMenuPageRedirection_LaptopsNotebooks">
+                  </a> <!-- testLaptopsNotebooksMenuPageRedirection_LaptopsNotebooks -->
+                  <span class="method-name">testLaptopsNotebooksMenuPageRedirection_LaptopsNotebooks</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testLaptopsNotebooksMenuPageRedirection_Macs">
+                  </a> <!-- testLaptopsNotebooksMenuPageRedirection_Macs -->
+                  <span class="method-name">testLaptopsNotebooksMenuPageRedirection_Macs</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testLaptopsNotebooksMenuPageRedirection_Windows">
+                  </a> <!-- testLaptopsNotebooksMenuPageRedirection_Windows -->
+                  <span class="method-name">testLaptopsNotebooksMenuPageRedirection_Windows</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-MyTestSuite-class-passed -->
+          <div class="suite-MyTestSuite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testCases.Homepage.TC_019_HOMEPAGE</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testFooterHeadingsText">
+                  </a> <!-- testFooterHeadingsText -->
+                  <span class="method-name">testFooterHeadingsText</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testFooterHeadingsVisibility">
+                  </a> <!-- testFooterHeadingsVisibility -->
+                  <span class="method-name">testFooterHeadingsVisibility</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-MyTestSuite-class-passed -->
+          <div class="suite-MyTestSuite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testCases.Homepage.TC_007_HOMEPAGE</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testShoppingCartElementVisibilityAndText_HeaderUI">
+                  </a> <!-- testShoppingCartElementVisibilityAndText_HeaderUI -->
+                  <span class="method-name">testShoppingCartElementVisibilityAndText_HeaderUI</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-MyTestSuite-class-passed -->
+          <div class="suite-MyTestSuite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testCases.Homepage.TC_014_HOMEPAGE</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testImageGalleryPicturesVisibility_MacBookAir">
+                  </a> <!-- testImageGalleryPicturesVisibility_MacBookAir -->
+                  <span class="method-name">testImageGalleryPicturesVisibility_MacBookAir</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-MyTestSuite-class-passed -->
+          <div class="suite-MyTestSuite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testCases.Homepage.TC_017_HOMEPAGE</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testFeaturedAddToCartButtonVisibility">
+                  </a> <!-- testFeaturedAddToCartButtonVisibility -->
+                  <span class="method-name">testFeaturedAddToCartButtonVisibility</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testFeaturedAddToWishListButtonVisibility">
+                  </a> <!-- testFeaturedAddToWishListButtonVisibility -->
+                  <span class="method-name">testFeaturedAddToWishListButtonVisibility</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testFeaturedCompareThisProductButtonVisibility">
+                  </a> <!-- testFeaturedCompareThisProductButtonVisibility -->
+                  <span class="method-name">testFeaturedCompareThisProductButtonVisibility</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-MyTestSuite-class-passed -->
+          <div class="suite-MyTestSuite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testCases.Homepage.TC_001_HOMEPAGE</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testPageURLTitle">
+                  </a> <!-- testPageURLTitle -->
+                  <span class="method-name">testPageURLTitle</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-MyTestSuite-class-passed -->
+          <div class="suite-MyTestSuite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testCases.Homepage.TC_021_HOMEPAGE</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testDesktopsMenuPageRedirection_Desktops">
+                  </a> <!-- testDesktopsMenuPageRedirection_Desktops -->
+                  <span class="method-name">testDesktopsMenuPageRedirection_Desktops</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testDesktopsMenuPageRedirection_Mac">
+                  </a> <!-- testDesktopsMenuPageRedirection_Mac -->
+                  <span class="method-name">testDesktopsMenuPageRedirection_Mac</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testDesktopsMenuPageRedirection_PC">
+                  </a> <!-- testDesktopsMenuPageRedirection_PC -->
+                  <span class="method-name">testDesktopsMenuPageRedirection_PC</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-MyTestSuite-class-passed -->
+          <div class="suite-MyTestSuite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testCases.Homepage.TC_011_HOMEPAGE</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testShoppingCartButtonLabelTextVisibility_NoItems_Header_UI">
+                  </a> <!-- testShoppingCartButtonLabelTextVisibility_NoItems_Header_UI -->
+                  <span class="method-name">testShoppingCartButtonLabelTextVisibility_NoItems_Header_UI</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-MyTestSuite-class-passed -->
+          <div class="suite-MyTestSuite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testCases.Homepage.TC_003_HOMEPAGE</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCurrencyDropDownElementVisibilityAndText_HeaderUI">
+                  </a> <!-- testCurrencyDropDownElementVisibilityAndText_HeaderUI -->
+                  <span class="method-name">testCurrencyDropDownElementVisibilityAndText_HeaderUI</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-MyTestSuite-class-passed -->
+          <div class="suite-MyTestSuite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testCases.Homepage.TC_004_HOMEPAGE</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testPhoneElementVisibilityAndText_HeaderUI">
+                  </a> <!-- testPhoneElementVisibilityAndText_HeaderUI -->
+                  <span class="method-name">testPhoneElementVisibilityAndText_HeaderUI</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-MyTestSuite-class-passed -->
+          <div class="suite-MyTestSuite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testCases.Homepage.TC_008_HOMEPAGE</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCheckoutElementVisibilityAndText_HeaderUI">
+                  </a> <!-- testCheckoutElementVisibilityAndText_HeaderUI -->
+                  <span class="method-name">testCheckoutElementVisibilityAndText_HeaderUI</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-MyTestSuite-class-passed -->
+          <div class="suite-MyTestSuite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testCases.Homepage.TC_013_HOMEPAGE</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testNavDropdownLinksVisibility_Components_HeaderUI">
+                  </a> <!-- testNavDropdownLinksVisibility_Components_HeaderUI -->
+                  <span class="method-name">testNavDropdownLinksVisibility_Components_HeaderUI</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testNavDropdownLinksVisibility_Desktops_HeaderUI">
+                  </a> <!-- testNavDropdownLinksVisibility_Desktops_HeaderUI -->
+                  <span class="method-name">testNavDropdownLinksVisibility_Desktops_HeaderUI</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testNavDropdownLinksVisibility_LaptopsNotebooks_HeaderUI">
+                  </a> <!-- testNavDropdownLinksVisibility_LaptopsNotebooks_HeaderUI -->
+                  <span class="method-name">testNavDropdownLinksVisibility_LaptopsNotebooks_HeaderUI</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testNavDropdownLinksVisibility_MP3Players_HeaderUI">
+                  </a> <!-- testNavDropdownLinksVisibility_MP3Players_HeaderUI -->
+                  <span class="method-name">testNavDropdownLinksVisibility_MP3Players_HeaderUI</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-MyTestSuite-class-passed -->
+          <div class="suite-MyTestSuite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testCases.Homepage.TC_006_HOMEPAGE</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testWishListElementVisibiityAndText_HeaderUI">
+                  </a> <!-- testWishListElementVisibiityAndText_HeaderUI -->
+                  <span class="method-name">testWishListElementVisibiityAndText_HeaderUI</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-MyTestSuite-class-passed -->
+          <div class="suite-MyTestSuite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testCases.Homepage.TC_023_HOMEPAGE</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testComponentsMenuPageRedirection_Components">
+                  </a> <!-- testComponentsMenuPageRedirection_Components -->
+                  <span class="method-name">testComponentsMenuPageRedirection_Components</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testComponentsMenuPageRedirection_MiceTrackballs">
+                  </a> <!-- testComponentsMenuPageRedirection_MiceTrackballs -->
+                  <span class="method-name">testComponentsMenuPageRedirection_MiceTrackballs</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testComponentsMenuPageRedirection_Monitors">
+                  </a> <!-- testComponentsMenuPageRedirection_Monitors -->
+                  <span class="method-name">testComponentsMenuPageRedirection_Monitors</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testComponentsMenuPageRedirection_Printers">
+                  </a> <!-- testComponentsMenuPageRedirection_Printers -->
+                  <span class="method-name">testComponentsMenuPageRedirection_Printers</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testComponentsMenuPageRedirection_Scanners">
+                  </a> <!-- testComponentsMenuPageRedirection_Scanners -->
+                  <span class="method-name">testComponentsMenuPageRedirection_Scanners</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testComponentsMenuPageRedirection_WebCameras">
+                  </a> <!-- testComponentsMenuPageRedirection_WebCameras -->
+                  <span class="method-name">testComponentsMenuPageRedirection_WebCameras</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-MyTestSuite-class-passed -->
+          <div class="suite-MyTestSuite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testCases.Homepage.TC_009_HOMEPAGE</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testSearchBarVisibility_HeaderUI">
+                  </a> <!-- testSearchBarVisibility_HeaderUI -->
+                  <span class="method-name">testSearchBarVisibility_HeaderUI</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-MyTestSuite-class-passed -->
+          <div class="suite-MyTestSuite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testCases.Homepage.TC_012_HOMEPAGE</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testNavLinksTextVisibility">
+                  </a> <!-- testNavLinksTextVisibility -->
+                  <span class="method-name">testNavLinksTextVisibility</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-MyTestSuite-class-passed -->
+          <div class="suite-MyTestSuite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testCases.Homepage.TC_005_HOMEPAGE</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testMyAccountDropDownElementVisibilityAndText_HeaderUI">
+                  </a> <!-- testMyAccountDropDownElementVisibilityAndText_HeaderUI -->
+                  <span class="method-name">testMyAccountDropDownElementVisibilityAndText_HeaderUI</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-MyTestSuite-class-passed -->
+          <div class="suite-MyTestSuite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testCases.Homepage.TC_010_HOMEPAGE</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testSearchBarPlaceholderTextVisibility_HeaderUI">
+                  </a> <!-- testSearchBarPlaceholderTextVisibility_HeaderUI -->
+                  <span class="method-name">testSearchBarPlaceholderTextVisibility_HeaderUI</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-MyTestSuite-class-passed -->
+          <div class="suite-MyTestSuite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testCases.Homepage.TC_020_HOMEPAGE</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testFooterHyperlinksText">
+                  </a> <!-- testFooterHyperlinksText -->
+                  <span class="method-name">testFooterHyperlinksText</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testFooterHyperlinksVisibility">
+                  </a> <!-- testFooterHyperlinksVisibility -->
+                  <span class="method-name">testFooterHyperlinksVisibility</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-MyTestSuite-class-passed -->
+          <div class="suite-MyTestSuite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testCases.Homepage.TC_016_HOMEPAGE</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testFeaturedSectionElementsVisibility_Images">
+                  </a> <!-- testFeaturedSectionElementsVisibility_Images -->
+                  <span class="method-name">testFeaturedSectionElementsVisibility_Images</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testFeaturedSectionElements_Images_Caption">
+                  </a> <!-- testFeaturedSectionElements_Images_Caption -->
+                  <span class="method-name">testFeaturedSectionElements_Images_Caption</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testFeaturedSectionElements_Images_OldPrice">
+                  </a> <!-- testFeaturedSectionElements_Images_OldPrice -->
+                  <span class="method-name">testFeaturedSectionElements_Images_OldPrice</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testFeaturedSectionElements_Images_Price">
+                  </a> <!-- testFeaturedSectionElements_Images_Price -->
+                  <span class="method-name">testFeaturedSectionElements_Images_Price</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testFeaturedSectionElements_Images_TaxPrice">
+                  </a> <!-- testFeaturedSectionElements_Images_TaxPrice -->
+                  <span class="method-name">testFeaturedSectionElements_Images_TaxPrice</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testFeaturedSectionElements_Images_Title">
+                  </a> <!-- testFeaturedSectionElements_Images_Title -->
+                  <span class="method-name">testFeaturedSectionElements_Images_Title</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testFeaturedSectionElements_Images_URL">
+                  </a> <!-- testFeaturedSectionElements_Images_URL -->
+                  <span class="method-name">testFeaturedSectionElements_Images_URL</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-MyTestSuite-class-passed -->
+          <div class="suite-MyTestSuite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testCases.Homepage.TC_015_HOMEPAGE</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testFeaturedHeadingVisibilityAndText">
+                  </a> <!-- testFeaturedHeadingVisibilityAndText -->
+                  <span class="method-name">testFeaturedHeadingVisibilityAndText</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-MyTestSuite-class-passed -->
+          <div class="suite-MyTestSuite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testCases.Homepage.TC_002_HOMEPAGE</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testLogoVisibilityAndText">
+                  </a> <!-- testLogoVisibilityAndText -->
+                  <span class="method-name">testLogoVisibilityAndText</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-MyTestSuite-class-passed -->
+        </div> <!-- panel MyTestSuite -->
+        <div panel-name="suite-MyTestSuite__0_" class="panel MyTestSuite__0_">
+          <div class="suite-MyTestSuite__0_-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testCases.RegisterPage.TC_006_REGISTER</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testRegisterPageForm_NoData_Agree_SubscriptionYes">
+                  </a> <!-- testRegisterPageForm_NoData_Agree_SubscriptionYes -->
+                  <span class="method-name">testRegisterPageForm_NoData_Agree_SubscriptionYes</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-MyTestSuite__0_-class-passed -->
+          <div class="suite-MyTestSuite__0_-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testCases.RegisterPage.TC_003_REGISTER</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testRegisterPageForm_NoData_NoAgree">
+                  </a> <!-- testRegisterPageForm_NoData_NoAgree -->
+                  <span class="method-name">testRegisterPageForm_NoData_NoAgree</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-MyTestSuite__0_-class-passed -->
+          <div class="suite-MyTestSuite__0_-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testCases.RegisterPage.TC_004_REGISTER</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testRegisterPageForm_NoData_Agree">
+                  </a> <!-- testRegisterPageForm_NoData_Agree -->
+                  <span class="method-name">testRegisterPageForm_NoData_Agree</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-MyTestSuite__0_-class-passed -->
+          <div class="suite-MyTestSuite__0_-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testCases.RegisterPage.TC_012_REGISTER</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testRegisterPageForm_ValidData(Test, User, user25e11e25@mail.com, 1234567890, pass123, pass123)">
+                  </a> <!-- testRegisterPageForm_ValidData(Test, User, user25e11e25@mail.com, 1234567890, pass123, pass123) -->
+                  <span class="method-name">testRegisterPageForm_ValidData</span>
+                  <span class="parameters">(Test,User,user25e11e25@mail.com,1234567890,pass123,pass123)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-MyTestSuite__0_-class-passed -->
+          <div class="suite-MyTestSuite__0_-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testCases.RegisterPage.TC_001_REGISTER</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testRegisterPageTitle">
+                  </a> <!-- testRegisterPageTitle -->
+                  <span class="method-name">testRegisterPageTitle</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testRegisterPageURL">
+                  </a> <!-- testRegisterPageURL -->
+                  <span class="method-name">testRegisterPageURL</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-MyTestSuite__0_-class-passed -->
+          <div class="suite-MyTestSuite__0_-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testCases.RegisterPage.TC_005_REGISTER</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testRegisterPageForm_NoData_NoAgree_SubscriptionYes">
+                  </a> <!-- testRegisterPageForm_NoData_NoAgree_SubscriptionYes -->
+                  <span class="method-name">testRegisterPageForm_NoData_NoAgree_SubscriptionYes</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-MyTestSuite__0_-class-passed -->
+          <div class="suite-MyTestSuite__0_-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testCases.RegisterPage.TC_002_REGISTER</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testRegisterPageHeading">
+                  </a> <!-- testRegisterPageHeading -->
+                  <span class="method-name">testRegisterPageHeading</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-MyTestSuite__0_-class-passed -->
+        </div> <!-- panel MyTestSuite__0_ -->
+        <div panel-name="test-xml-MyTestSuite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">/Users/JeffinMathew/eclipse-workspace/OpenCartProject/testng_homepage.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite name=&quot;MyTestSuite&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot;&gt;
+  &lt;listeners&gt;
+    &lt;listener class-name=&quot;testCases.Homepage.ExtentReportManager&quot;/&gt;
+  &lt;/listeners&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;HomePageTests&quot; verbose=&quot;0&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;testCases.Homepage.TC_001_HOMEPAGE&quot;/&gt;
+      &lt;class name=&quot;testCases.Homepage.TC_002_HOMEPAGE&quot;/&gt;
+      &lt;class name=&quot;testCases.Homepage.TC_003_HOMEPAGE&quot;/&gt;
+      &lt;class name=&quot;testCases.Homepage.TC_004_HOMEPAGE&quot;/&gt;
+      &lt;class name=&quot;testCases.Homepage.TC_005_HOMEPAGE&quot;/&gt;
+      &lt;class name=&quot;testCases.Homepage.TC_006_HOMEPAGE&quot;/&gt;
+      &lt;class name=&quot;testCases.Homepage.TC_007_HOMEPAGE&quot;/&gt;
+      &lt;class name=&quot;testCases.Homepage.TC_008_HOMEPAGE&quot;/&gt;
+      &lt;class name=&quot;testCases.Homepage.TC_009_HOMEPAGE&quot;/&gt;
+      &lt;class name=&quot;testCases.Homepage.TC_010_HOMEPAGE&quot;/&gt;
+      &lt;class name=&quot;testCases.Homepage.TC_011_HOMEPAGE&quot;/&gt;
+      &lt;class name=&quot;testCases.Homepage.TC_012_HOMEPAGE&quot;/&gt;
+      &lt;class name=&quot;testCases.Homepage.TC_013_HOMEPAGE&quot;/&gt;
+      &lt;class name=&quot;testCases.Homepage.TC_014_HOMEPAGE&quot;/&gt;
+      &lt;class name=&quot;testCases.Homepage.TC_015_HOMEPAGE&quot;/&gt;
+      &lt;class name=&quot;testCases.Homepage.TC_016_HOMEPAGE&quot;/&gt;
+      &lt;class name=&quot;testCases.Homepage.TC_017_HOMEPAGE&quot;/&gt;
+      &lt;class name=&quot;testCases.Homepage.TC_019_HOMEPAGE&quot;/&gt;
+      &lt;class name=&quot;testCases.Homepage.TC_020_HOMEPAGE&quot;/&gt;
+      &lt;class name=&quot;testCases.Homepage.TC_021_HOMEPAGE&quot;/&gt;
+      &lt;class name=&quot;testCases.Homepage.TC_022_HOMEPAGE&quot;/&gt;
+      &lt;class name=&quot;testCases.Homepage.TC_023_HOMEPAGE&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- HomePageTests --&gt;
+&lt;/suite&gt; &lt;!-- MyTestSuite --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="test-xml-MyTestSuite__0_" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">/Users/JeffinMathew/eclipse-workspace/OpenCartProject/testng_register.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite name=&quot;MyTestSuite (0)&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot;&gt;
+  &lt;listeners&gt;
+    &lt;listener class-name=&quot;testCases.RegisterPage.ExtentReportManager&quot;/&gt;
+  &lt;/listeners&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;RegisterPageTests&quot; verbose=&quot;0&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;testCases.RegisterPage.TC_001_REGISTER&quot;/&gt;
+      &lt;class name=&quot;testCases.RegisterPage.TC_002_REGISTER&quot;/&gt;
+      &lt;class name=&quot;testCases.RegisterPage.TC_003_REGISTER&quot;/&gt;
+      &lt;class name=&quot;testCases.RegisterPage.TC_004_REGISTER&quot;/&gt;
+      &lt;class name=&quot;testCases.RegisterPage.TC_005_REGISTER&quot;/&gt;
+      &lt;class name=&quot;testCases.RegisterPage.TC_006_REGISTER&quot;/&gt;
+      &lt;class name=&quot;testCases.RegisterPage.TC_012_REGISTER&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- RegisterPageTests --&gt;
+&lt;/suite&gt; &lt;!-- MyTestSuite (0) --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-MyTestSuite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for MyTestSuite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">HomePageTests (22 classes)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-MyTestSuite__0_" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for MyTestSuite (0)</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">RegisterPageTests (7 classes)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-MyTestSuite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for MyTestSuite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-MyTestSuite__0_" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for MyTestSuite (0)</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-MyTestSuite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for MyTestSuite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_MyTestSuite');
+function tableData_MyTestSuite() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(45);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'testImageGalleryPicturesVisibility_iPhone')
+data.setCell(0, 2, 'testCases.Homepage.TC_014_HOMEPAGE')
+data.setCell(0, 3, 72755);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'testComponentsMenuPageRedirection_MiceTrackballs')
+data.setCell(1, 2, 'testCases.Homepage.TC_023_HOMEPAGE')
+data.setCell(1, 3, 4951);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'testFeaturedCompareThisProductButtonVisibility')
+data.setCell(2, 2, 'testCases.Homepage.TC_017_HOMEPAGE')
+data.setCell(2, 3, 4102);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'testFeaturedAddToCartButtonVisibility')
+data.setCell(3, 2, 'testCases.Homepage.TC_017_HOMEPAGE')
+data.setCell(3, 3, 4101);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'testFeaturedAddToWishListButtonVisibility')
+data.setCell(4, 2, 'testCases.Homepage.TC_017_HOMEPAGE')
+data.setCell(4, 3, 4082);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'testComponentsMenuPageRedirection_WebCameras')
+data.setCell(5, 2, 'testCases.Homepage.TC_023_HOMEPAGE')
+data.setCell(5, 3, 3542);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'testDesktopsMenuPageRedirection_PC')
+data.setCell(6, 2, 'testCases.Homepage.TC_021_HOMEPAGE')
+data.setCell(6, 3, 3526);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'testLaptopsNotebooksMenuPageRedirection_LaptopsNotebooks')
+data.setCell(7, 2, 'testCases.Homepage.TC_022_HOMEPAGE')
+data.setCell(7, 3, 3482);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'testLaptopsNotebooksMenuPageRedirection_Macs')
+data.setCell(8, 2, 'testCases.Homepage.TC_022_HOMEPAGE')
+data.setCell(8, 3, 3480);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'testLaptopsNotebooksMenuPageRedirection_Windows')
+data.setCell(9, 2, 'testCases.Homepage.TC_022_HOMEPAGE')
+data.setCell(9, 3, 3471);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'testDesktopsMenuPageRedirection_Mac')
+data.setCell(10, 2, 'testCases.Homepage.TC_021_HOMEPAGE')
+data.setCell(10, 3, 3450);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'testDesktopsMenuPageRedirection_Desktops')
+data.setCell(11, 2, 'testCases.Homepage.TC_021_HOMEPAGE')
+data.setCell(11, 3, 3431);
+data.setCell(12, 0, 12)
+data.setCell(12, 1, 'testComponentsMenuPageRedirection_Components')
+data.setCell(12, 2, 'testCases.Homepage.TC_023_HOMEPAGE')
+data.setCell(12, 3, 3416);
+data.setCell(13, 0, 13)
+data.setCell(13, 1, 'testComponentsMenuPageRedirection_Scanners')
+data.setCell(13, 2, 'testCases.Homepage.TC_023_HOMEPAGE')
+data.setCell(13, 3, 3403);
+data.setCell(14, 0, 14)
+data.setCell(14, 1, 'testComponentsMenuPageRedirection_Printers')
+data.setCell(14, 2, 'testCases.Homepage.TC_023_HOMEPAGE')
+data.setCell(14, 3, 3393);
+data.setCell(15, 0, 15)
+data.setCell(15, 1, 'testComponentsMenuPageRedirection_Monitors')
+data.setCell(15, 2, 'testCases.Homepage.TC_023_HOMEPAGE')
+data.setCell(15, 3, 3384);
+data.setCell(16, 0, 16)
+data.setCell(16, 1, 'testImageGalleryPicturesVisibility_MacBookAir')
+data.setCell(16, 2, 'testCases.Homepage.TC_014_HOMEPAGE')
+data.setCell(16, 3, 1562);
+data.setCell(17, 0, 17)
+data.setCell(17, 1, 'testFooterHyperlinksVisibility')
+data.setCell(17, 2, 'testCases.Homepage.TC_020_HOMEPAGE')
+data.setCell(17, 3, 1063);
+data.setCell(18, 0, 18)
+data.setCell(18, 1, 'testFooterHeadingsVisibility')
+data.setCell(18, 2, 'testCases.Homepage.TC_019_HOMEPAGE')
+data.setCell(18, 3, 1060);
+data.setCell(19, 0, 19)
+data.setCell(19, 1, 'testCurrencyDropDownElementVisibilityAndText_HeaderUI')
+data.setCell(19, 2, 'testCases.Homepage.TC_003_HOMEPAGE')
+data.setCell(19, 3, 579);
+data.setCell(20, 0, 20)
+data.setCell(20, 1, 'testMyAccountDropDownElementVisibilityAndText_HeaderUI')
+data.setCell(20, 2, 'testCases.Homepage.TC_005_HOMEPAGE')
+data.setCell(20, 3, 451);
+data.setCell(21, 0, 21)
+data.setCell(21, 1, 'testNavLinksTextVisibility')
+data.setCell(21, 2, 'testCases.Homepage.TC_012_HOMEPAGE')
+data.setCell(21, 3, 328);
+data.setCell(22, 0, 22)
+data.setCell(22, 1, 'testNavDropdownLinksVisibility_MP3Players_HeaderUI')
+data.setCell(22, 2, 'testCases.Homepage.TC_013_HOMEPAGE')
+data.setCell(22, 3, 316);
+data.setCell(23, 0, 23)
+data.setCell(23, 1, 'testNavDropdownLinksVisibility_Desktops_HeaderUI')
+data.setCell(23, 2, 'testCases.Homepage.TC_013_HOMEPAGE')
+data.setCell(23, 3, 269);
+data.setCell(24, 0, 24)
+data.setCell(24, 1, 'testFooterHyperlinksText')
+data.setCell(24, 2, 'testCases.Homepage.TC_020_HOMEPAGE')
+data.setCell(24, 3, 193);
+data.setCell(25, 0, 25)
+data.setCell(25, 1, 'testNavDropdownLinksVisibility_Components_HeaderUI')
+data.setCell(25, 2, 'testCases.Homepage.TC_013_HOMEPAGE')
+data.setCell(25, 3, 192);
+data.setCell(26, 0, 26)
+data.setCell(26, 1, 'testNavDropdownLinksVisibility_LaptopsNotebooks_HeaderUI')
+data.setCell(26, 2, 'testCases.Homepage.TC_013_HOMEPAGE')
+data.setCell(26, 3, 185);
+data.setCell(27, 0, 27)
+data.setCell(27, 1, 'testPageURLTitle')
+data.setCell(27, 2, 'testCases.Homepage.TC_001_HOMEPAGE')
+data.setCell(27, 3, 177);
+data.setCell(28, 0, 28)
+data.setCell(28, 1, 'testWishListElementVisibiityAndText_HeaderUI')
+data.setCell(28, 2, 'testCases.Homepage.TC_006_HOMEPAGE')
+data.setCell(28, 3, 162);
+data.setCell(29, 0, 29)
+data.setCell(29, 1, 'testShoppingCartElementVisibilityAndText_HeaderUI')
+data.setCell(29, 2, 'testCases.Homepage.TC_007_HOMEPAGE')
+data.setCell(29, 3, 157);
+data.setCell(30, 0, 30)
+data.setCell(30, 1, 'testPhoneElementVisibilityAndText_HeaderUI')
+data.setCell(30, 2, 'testCases.Homepage.TC_004_HOMEPAGE')
+data.setCell(30, 3, 156);
+data.setCell(31, 0, 31)
+data.setCell(31, 1, 'testCheckoutElementVisibilityAndText_HeaderUI')
+data.setCell(31, 2, 'testCases.Homepage.TC_008_HOMEPAGE')
+data.setCell(31, 3, 150);
+data.setCell(32, 0, 32)
+data.setCell(32, 1, 'testLogoVisibilityAndText')
+data.setCell(32, 2, 'testCases.Homepage.TC_002_HOMEPAGE')
+data.setCell(32, 3, 133);
+data.setCell(33, 0, 33)
+data.setCell(33, 1, 'testSearchBarVisibility_HeaderUI')
+data.setCell(33, 2, 'testCases.Homepage.TC_009_HOMEPAGE')
+data.setCell(33, 3, 122);
+data.setCell(34, 0, 34)
+data.setCell(34, 1, 'testFeaturedHeadingVisibilityAndText')
+data.setCell(34, 2, 'testCases.Homepage.TC_015_HOMEPAGE')
+data.setCell(34, 3, 99);
+data.setCell(35, 0, 35)
+data.setCell(35, 1, 'testFooterHeadingsText')
+data.setCell(35, 2, 'testCases.Homepage.TC_019_HOMEPAGE')
+data.setCell(35, 3, 90);
+data.setCell(36, 0, 36)
+data.setCell(36, 1, 'testFeaturedSectionElementsVisibility_Images')
+data.setCell(36, 2, 'testCases.Homepage.TC_016_HOMEPAGE')
+data.setCell(36, 3, 75);
+data.setCell(37, 0, 37)
+data.setCell(37, 1, 'testFeaturedSectionElements_Images_Caption')
+data.setCell(37, 2, 'testCases.Homepage.TC_016_HOMEPAGE')
+data.setCell(37, 3, 68);
+data.setCell(38, 0, 38)
+data.setCell(38, 1, 'testFeaturedSectionElements_Images_Price')
+data.setCell(38, 2, 'testCases.Homepage.TC_016_HOMEPAGE')
+data.setCell(38, 3, 55);
+data.setCell(39, 0, 39)
+data.setCell(39, 1, 'testShoppingCartButtonLabelTextVisibility_NoItems_Header_UI')
+data.setCell(39, 2, 'testCases.Homepage.TC_011_HOMEPAGE')
+data.setCell(39, 3, 55);
+data.setCell(40, 0, 40)
+data.setCell(40, 1, 'testFeaturedSectionElements_Images_TaxPrice')
+data.setCell(40, 2, 'testCases.Homepage.TC_016_HOMEPAGE')
+data.setCell(40, 3, 52);
+data.setCell(41, 0, 41)
+data.setCell(41, 1, 'testSearchBarPlaceholderTextVisibility_HeaderUI')
+data.setCell(41, 2, 'testCases.Homepage.TC_010_HOMEPAGE')
+data.setCell(41, 3, 44);
+data.setCell(42, 0, 42)
+data.setCell(42, 1, 'testFeaturedSectionElements_Images_OldPrice')
+data.setCell(42, 2, 'testCases.Homepage.TC_016_HOMEPAGE')
+data.setCell(42, 3, 41);
+data.setCell(43, 0, 43)
+data.setCell(43, 1, 'testFeaturedSectionElements_Images_URL')
+data.setCell(43, 2, 'testCases.Homepage.TC_016_HOMEPAGE')
+data.setCell(43, 3, 35);
+data.setCell(44, 0, 44)
+data.setCell(44, 1, 'testFeaturedSectionElements_Images_Title')
+data.setCell(44, 2, 'testCases.Homepage.TC_016_HOMEPAGE')
+data.setCell(44, 3, 34);
+window.suiteTableData['MyTestSuite']= { tableData: data, tableDiv: 'times-div-MyTestSuite'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 2 minutes</span>
+              <div id="times-div-MyTestSuite">
+              </div> <!-- times-div-MyTestSuite -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-MyTestSuite__0_" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for MyTestSuite (0)</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_MyTestSuite__0_');
+function tableData_MyTestSuite__0_() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(8);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'testRegisterPageForm_ValidData')
+data.setCell(0, 2, 'testCases.RegisterPage.TC_012_REGISTER')
+data.setCell(0, 3, 3215);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'testRegisterPageForm_NoData_NoAgree_SubscriptionYes')
+data.setCell(1, 2, 'testCases.RegisterPage.TC_005_REGISTER')
+data.setCell(1, 3, 2219);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'testRegisterPageForm_NoData_Agree_SubscriptionYes')
+data.setCell(2, 2, 'testCases.RegisterPage.TC_006_REGISTER')
+data.setCell(2, 3, 2149);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'testRegisterPageForm_NoData_NoAgree')
+data.setCell(3, 2, 'testCases.RegisterPage.TC_003_REGISTER')
+data.setCell(3, 3, 1908);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'testRegisterPageForm_NoData_Agree')
+data.setCell(4, 2, 'testCases.RegisterPage.TC_004_REGISTER')
+data.setCell(4, 3, 1899);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'testRegisterPageHeading')
+data.setCell(5, 2, 'testCases.RegisterPage.TC_002_REGISTER')
+data.setCell(5, 3, 1260);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'testRegisterPageTitle')
+data.setCell(6, 2, 'testCases.RegisterPage.TC_001_REGISTER')
+data.setCell(6, 3, 1133);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'testRegisterPageURL')
+data.setCell(7, 2, 'testCases.RegisterPage.TC_001_REGISTER')
+data.setCell(7, 3, 414);
+window.suiteTableData['MyTestSuite__0_']= { tableData: data, tableDiv: 'times-div-MyTestSuite__0_'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 14 seconds</span>
+              <div id="times-div-MyTestSuite__0_">
+              </div> <!-- times-div-MyTestSuite__0_ -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-MyTestSuite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for MyTestSuite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-MyTestSuite__0_" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for MyTestSuite (0)</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-MyTestSuite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">0 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-MyTestSuite__0_" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">0 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-MyTestSuite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">testCases.Homepage.TC_001_HOMEPAGE</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setup</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">testPageURLTitle</span>
+                <span class="method-start">6153 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">6356 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testCases.Homepage.TC_002_HOMEPAGE</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setup</span>
+                <span class="method-start">6544 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">testLogoVisibilityAndText</span>
+                <span class="method-start">11299 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">11433 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testCases.Homepage.TC_003_HOMEPAGE</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setup</span>
+                <span class="method-start">11619 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">testCurrencyDropDownElementVisibilityAndText_HeaderUI</span>
+                <span class="method-start">17102 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">17682 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testCases.Homepage.TC_004_HOMEPAGE</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setup</span>
+                <span class="method-start">17898 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">testPhoneElementVisibilityAndText_HeaderUI</span>
+                <span class="method-start">23523 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">23680 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testCases.Homepage.TC_005_HOMEPAGE</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setup</span>
+                <span class="method-start">23875 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">testMyAccountDropDownElementVisibilityAndText_HeaderUI</span>
+                <span class="method-start">29561 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">30013 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testCases.Homepage.TC_006_HOMEPAGE</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setup</span>
+                <span class="method-start">30185 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">testWishListElementVisibiityAndText_HeaderUI</span>
+                <span class="method-start">34935 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">35098 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testCases.Homepage.TC_007_HOMEPAGE</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setup</span>
+                <span class="method-start">35261 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">testShoppingCartElementVisibilityAndText_HeaderUI</span>
+                <span class="method-start">39848 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">40006 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testCases.Homepage.TC_008_HOMEPAGE</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setup</span>
+                <span class="method-start">40176 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">testCheckoutElementVisibilityAndText_HeaderUI</span>
+                <span class="method-start">45311 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">45462 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testCases.Homepage.TC_009_HOMEPAGE</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setup</span>
+                <span class="method-start">45624 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">testSearchBarVisibility_HeaderUI</span>
+                <span class="method-start">50517 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">50640 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testCases.Homepage.TC_010_HOMEPAGE</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setup</span>
+                <span class="method-start">50803 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">testSearchBarPlaceholderTextVisibility_HeaderUI</span>
+                <span class="method-start">55512 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">55557 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testCases.Homepage.TC_011_HOMEPAGE</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setup</span>
+                <span class="method-start">55776 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">testShoppingCartButtonLabelTextVisibility_NoItems_Header_UI</span>
+                <span class="method-start">60946 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">61001 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testCases.Homepage.TC_012_HOMEPAGE</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setup</span>
+                <span class="method-start">61168 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">testNavLinksTextVisibility</span>
+                <span class="method-start">65560 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">65889 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testCases.Homepage.TC_013_HOMEPAGE</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setup</span>
+                <span class="method-start">66116 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">testNavDropdownLinksVisibility_Desktops_HeaderUI</span>
+                <span class="method-start">71253 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testNavDropdownLinksVisibility_LaptopsNotebooks_HeaderUI</span>
+                <span class="method-start">71524 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testNavDropdownLinksVisibility_Components_HeaderUI</span>
+                <span class="method-start">71711 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testNavDropdownLinksVisibility_MP3Players_HeaderUI</span>
+                <span class="method-start">71904 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">72221 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testCases.Homepage.TC_014_HOMEPAGE</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setup</span>
+                <span class="method-start">72391 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">testImageGalleryPicturesVisibility_MacBookAir</span>
+                <span class="method-start">77584 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testImageGalleryPicturesVisibility_iPhone</span>
+                <span class="method-start">79147 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">151907 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testCases.Homepage.TC_015_HOMEPAGE</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setup</span>
+                <span class="method-start">152082 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">testFeaturedHeadingVisibilityAndText</span>
+                <span class="method-start">156788 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">156888 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testCases.Homepage.TC_016_HOMEPAGE</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setup</span>
+                <span class="method-start">157095 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">testFeaturedSectionElementsVisibility_Images</span>
+                <span class="method-start">162466 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testFeaturedSectionElements_Images_Caption</span>
+                <span class="method-start">162542 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testFeaturedSectionElements_Images_OldPrice</span>
+                <span class="method-start">162611 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testFeaturedSectionElements_Images_Price</span>
+                <span class="method-start">162654 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testFeaturedSectionElements_Images_TaxPrice</span>
+                <span class="method-start">162712 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testFeaturedSectionElements_Images_Title</span>
+                <span class="method-start">162765 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testFeaturedSectionElements_Images_URL</span>
+                <span class="method-start">162800 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">162836 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testCases.Homepage.TC_017_HOMEPAGE</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setup</span>
+                <span class="method-start">163015 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">testFeaturedAddToCartButtonVisibility</span>
+                <span class="method-start">167723 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testFeaturedAddToWishListButtonVisibility</span>
+                <span class="method-start">171825 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testFeaturedCompareThisProductButtonVisibility</span>
+                <span class="method-start">175908 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">180011 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testCases.Homepage.TC_019_HOMEPAGE</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setup</span>
+                <span class="method-start">180243 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">testFooterHeadingsText</span>
+                <span class="method-start">185517 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testFooterHeadingsVisibility</span>
+                <span class="method-start">185609 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">186670 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testCases.Homepage.TC_020_HOMEPAGE</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setup</span>
+                <span class="method-start">186842 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">testFooterHyperlinksText</span>
+                <span class="method-start">191530 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testFooterHyperlinksVisibility</span>
+                <span class="method-start">191725 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">192789 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testCases.Homepage.TC_021_HOMEPAGE</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setup</span>
+                <span class="method-start">192952 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">testDesktopsMenuPageRedirection_PC</span>
+                <span class="method-start">197442 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testDesktopsMenuPageRedirection_Mac</span>
+                <span class="method-start">200970 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testDesktopsMenuPageRedirection_Desktops</span>
+                <span class="method-start">204422 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">207854 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testCases.Homepage.TC_022_HOMEPAGE</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setup</span>
+                <span class="method-start">208086 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">testLaptopsNotebooksMenuPageRedirection_Macs</span>
+                <span class="method-start">213018 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testLaptopsNotebooksMenuPageRedirection_Windows</span>
+                <span class="method-start">216499 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testLaptopsNotebooksMenuPageRedirection_LaptopsNotebooks</span>
+                <span class="method-start">219971 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">223454 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testCases.Homepage.TC_023_HOMEPAGE</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setup</span>
+                <span class="method-start">223644 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">testComponentsMenuPageRedirection_MiceTrackballs</span>
+                <span class="method-start">226764 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testComponentsMenuPageRedirection_Monitors</span>
+                <span class="method-start">231716 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testComponentsMenuPageRedirection_Printers</span>
+                <span class="method-start">235101 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testComponentsMenuPageRedirection_Scanners</span>
+                <span class="method-start">238495 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testComponentsMenuPageRedirection_WebCameras</span>
+                <span class="method-start">241899 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testComponentsMenuPageRedirection_Components</span>
+                <span class="method-start">245441 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">248858 ms</span>
+              </div> <!-- configuration-class after -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-MyTestSuite__0_" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">testCases.RegisterPage.TC_001_REGISTER</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setup</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">testRegisterPageTitle</span>
+                <span class="method-start">4475 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testRegisterPageURL</span>
+                <span class="method-start">5611 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">6026 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testCases.RegisterPage.TC_002_REGISTER</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setup</span>
+                <span class="method-start">6249 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">testRegisterPageHeading</span>
+                <span class="method-start">10834 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">12095 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testCases.RegisterPage.TC_003_REGISTER</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setup</span>
+                <span class="method-start">12271 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">testRegisterPageForm_NoData_NoAgree</span>
+                <span class="method-start">17754 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">19663 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testCases.RegisterPage.TC_004_REGISTER</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setup</span>
+                <span class="method-start">19833 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">testRegisterPageForm_NoData_Agree</span>
+                <span class="method-start">24962 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">26862 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testCases.RegisterPage.TC_005_REGISTER</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setup</span>
+                <span class="method-start">27030 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">testRegisterPageForm_NoData_NoAgree_SubscriptionYes</span>
+                <span class="method-start">31914 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">34133 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testCases.RegisterPage.TC_006_REGISTER</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setup</span>
+                <span class="method-start">34280 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">testRegisterPageForm_NoData_Agree_SubscriptionYes</span>
+                <span class="method-start">39245 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">41395 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testCases.RegisterPage.TC_012_REGISTER</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setup</span>
+                <span class="method-start">41576 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">testRegisterPageForm_ValidData(Test, User, user25e11e25@mail.com, 1234567890, pass123, pass123)</span>
+                <span class="method-start">46279 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">49495 ms</span>
+              </div> <!-- configuration-class after -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+<script type="text/javascript" src="testng-reports2.js"></script>
+</html>

@@ -14,16 +14,17 @@ public class BaseClass {
     
     @BeforeClass
     public void setup() {
-        ChromeOptions options = new ChromeOptions();
+    	
+    	ChromeOptions options = new ChromeOptions();
         
         // Add recommended options for CI/headless environments
-        options.addArguments("--no-sandbox");
-        options.addArguments("--disable-dev-shm-usage");
-        options.addArguments("--headless=new"); // or "--headless"
-        options.addArguments("--disable-gpu");
-        options.addArguments("--disable-extensions");
+		options.addArguments("--no-sandbox");
+		options.addArguments("--disable-dev-shm-usage");
+		options.addArguments("--headless=new"); // or "--headless"
+		options.addArguments("--disable-gpu");
+		options.addArguments("--disable-extensions");
         
-        driver = new ChromeDriver(options);  // Pass options here
+        driver = new ChromeDriver();  // Pass options here
         
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.manage().window().maximize();
