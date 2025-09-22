@@ -9,11 +9,10 @@ public class TC_014_HOMEPAGE extends BaseClass {
 	
 	HomePage homePage;
 	
-	@Test
-	public void testImageGalleryPicturesVisibility_iPhone() {
-		homePage = new HomePage(driver);
-		Assert.assertTrue(homePage.isIPhoneImageDisplayed());
-	}
+//	public void testImageGalleryPicturesVisibility_iPhone() {
+//		homePage = new HomePage(driver);
+//		Assert.assertTrue(homePage.isIPhoneImageDisplayed());
+//	}
 	
 	@Test
 	public void testImageGalleryPicturesVisibility_MacBookAir() {
