@@ -90,12 +90,21 @@ This repository provides a robust test framework to ensure the quality of the Op
 
 ## 🛠️ Tech Stack
 
-| Category        | Tool/Technology             |
-|----------------|-----------------------------|
-| Programming Language | Java                     |
-| Automation Framework | Selenium WebDriver        |
-| Test Framework | TestNG                   |
-| Design Pattern | Page Object Model (POM)     |
-| Build Tool     | Maven    |
+| Category             | Tool/Technology             |
+|----------------------|-----------------------------|
+| Programming Language | Java                        |
+| Automation Framework | Selenium WebDriver          |
+| Test Framework       | TestNG                      |
+| Design Pattern       | Page Object Model (POM)     |
+| Build Tool           | Maven                       |
+| CI Tool              | Jenkins                     |
 
 ---
+
+## Automation Report (as of 9/22/15) | ExtentReports
+
+### Homepage
+<img width="800" alt="Homepage_AutomationReport" src="https://github.com/user-attachments/assets/294298c6-7623-45a5-9405-bbc227fff6d3" />
+
+### RegisterPage
+<img width="800" alt="RegisterPage_AutomationReport" src="https://github.com/user-attachments/assets/72e30220-44e1-45c8-af9e-511751365d4b" />
