@@ -63,6 +63,7 @@
           <suiteXmlFiles>
             <suiteXmlFile>testng_homepage.xml</suiteXmlFile>
             <suiteXmlFile>testng_register.xml</suiteXmlFile>
+            <suiteXmlFile>testng_cart.xml</suiteXmlFile>
           </suiteXmlFiles>
         </configuration>
       </plugin>
