@@ -3,12 +3,12 @@
 <suite name="MyTestSuite">
     <test name="CartTests">
     	<classes>
-        	<class name="testCases.Cart.TC_CART_001" />
-        	<class name="testCases.Cart.TC_CART_002" />
-        	<class name="testCases.Cart.TC_CART_003" />
-        	<class name="testCases.Cart.TC_CART_004" />
-        	<class name="testCases.Cart.TC_CART_005" />
-        	<class name="testCases.Cart.TC_CART_006" />
+        	<class name="testCases.Cart.TC_001_CART" />
+        	<class name="testCases.Cart.TC_002_CART" />
+        	<class name="testCases.Cart.TC_003_CART" />
+        	<class name="testCases.Cart.TC_004_CART" />
+        	<class name="testCases.Cart.TC_005_CART" />
+        	<class name="testCases.Cart.TC_006_CART" />
        	</classes>
     </test>
 </suite>
