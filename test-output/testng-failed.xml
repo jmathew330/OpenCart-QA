@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Default test(failed)">
+<suite name="Failed suite [MyTestSuite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="CartTests(failed)">
     <classes>
-      <class name="testCases.RegisterPage.TC_020_REGISTER">
+      <class name="testCases.Cart.TC_CART_002">
         <methods>
           <include name="tearDown"/>
-          <include name="testRegisterForm_ExceedCharLimit_Password"/>
+          <include name="testAddToCart_Macbook_AddToCart_QuantityAndPrice"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- testCases.RegisterPage.TC_020_REGISTER -->
+      </class> <!-- testCases.Cart.TC_CART_002 -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- CartTests(failed) -->
+</suite> <!-- Failed suite [MyTestSuite] -->

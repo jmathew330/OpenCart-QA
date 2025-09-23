@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testCases.RegisterPage.TC_020_REGISTER">
+      <class name="testCases.Cart.TC_CART_005">
         <methods>
           <include name="tearDown"/>
-          <include name="testRegisterForm_ExceedCharLimit_Password"/>
           <include name="setup"/>
+          <include name="testAddToCart_Macbook_RemoveFromCart_QuantityPrice"/>
         </methods>
-      </class> <!-- testCases.RegisterPage.TC_020_REGISTER -->
+      </class> <!-- testCases.Cart.TC_CART_005 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

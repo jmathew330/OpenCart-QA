@@ -1,18 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [MyTestSuite]" guice-stage="DEVELOPMENT">
-  <listeners>
-    <listener class-name="testCases.Homepage.ExtentReportManager"/>
-  </listeners>
-  <test thread-count="5" name="HomePageTests(failed)">
+  <test thread-count="5" name="CartTests(failed)">
     <classes>
-      <class name="testCases.Homepage.TC_014_HOMEPAGE">
+      <class name="testCases.Cart.TC_CART_002">
         <methods>
-          <include name="testImageGalleryPicturesVisibility_iPhone"/>
           <include name="tearDown"/>
+          <include name="testAddToCart_Macbook_AddToCart_QuantityAndPrice"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- testCases.Homepage.TC_014_HOMEPAGE -->
+      </class> <!-- testCases.Cart.TC_CART_002 -->
     </classes>
-  </test> <!-- HomePageTests(failed) -->
+  </test> <!-- CartTests(failed) -->
 </suite> <!-- Failed suite [MyTestSuite] -->
