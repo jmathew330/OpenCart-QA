@@ -79,6 +79,20 @@ This repository provides a robust test framework to ensure the quality of the Op
 
 ---
 
+### Cart Functionality – UI Elements
+
+| Test Case ID   | Title                                                                                         | Description                                                                                       |
+|----------------|-----------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|
+| TC_CART_001     | Verify success message is present and displays with correct text after adding the featured MacBook to the cart | Ensure success message is present and displays with correct text after adding the featured MacBook to the cart |
+| TC_CART_002     | Verify quantity count and price per quantity is present and displays with correct text after adding a single MacBook to the cart | Ensure quantity count and price per quantity is present and displays with correct text after adding a single MacBook to the cart |
+| TC_CART_003     | Verify success message is present and displays with correct text after adding the featured iPhone to the cart | Ensure success message is present and displays with correct text after adding the featured iPhone to the cart |
+| TC_CART_004     | Verify quantity count and price per quantity is present and displays with correct text after adding a single iPhone to the cart | Ensure quantity count and price per quantity is present and displays with correct text after adding a single iPhone to the cart |
+| TC_CART_005     | Verify quantity count and price per quantity is present and displays with correct text after removing a single MacBook from the cart | Ensure quantity count and price per quantity is present and displays with correct text after removing a single MacBook from the cart |
+| TC_CART_006     | Verify quantity count and price per quantity is present and displays with correct text after removing a single iPhone from the cart | Ensure quantity count and price per quantity is present and displays with correct text after removing a single iPhone from the cart |
+
+---
+
+
 ### Login Page Tests
 
 | Test Case ID      | Description                                                                                          | Expected Outcome                                                      |
