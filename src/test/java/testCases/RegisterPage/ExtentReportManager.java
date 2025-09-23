@@ -18,7 +18,7 @@ public class ExtentReportManager implements ITestListener {
 	
 	public void onStart(ITestContext context) {
 	
-	sparkReporter = new ExtentSparkReporter (System.getProperty("user.dir")+"/reports_register/myReport.html");
+	sparkReporter = new ExtentSparkReporter (System.getProperty("user.dir")+"/reports_register/Report_RegisterPage.html");
 	sparkReporter.config().setDocumentTitle("Automation Report");
 	sparkReporter.config().setReportName("Functional Testing");
 	sparkReporter.config().setTheme(Theme.STANDARD);
