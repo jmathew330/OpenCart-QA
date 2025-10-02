@@ -1,6 +1,8 @@
 package pages;
 
 import java.time.Duration;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.NoSuchElementException;
 
 import org.openqa.selenium.By;
@@ -10,8 +12,11 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
 public class Cart extends BasePage {
+	
+	Cart cart;
 	
 	public Cart(WebDriver driver) {
 		super(driver);
@@ -32,6 +37,7 @@ public class Cart extends BasePage {
 	
 	@FindBy(xpath="//td[@class='text-left']//a[contains(text(),'iPhone')]") WebElement iPhoneShoppingCartDropdownLink;
 
+	@FindBy(xpath="//strong[normalize-space()='View Cart']") WebElement viewCartLink;
 
 	
 	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
@@ -100,6 +106,10 @@ public class Cart extends BasePage {
 		js.executeScript("arguments[0].click();", removeItemButton);
 	}
 	
+	public void clickViewCartLink() {
+		viewCartLink.click();
+	}
+	
 	public String getEmptyCartMessageText() {
 		WebElement emptyCartMessage = driver.findElement(By.xpath("//p[@class='text-center']"));
 		String emptyCartMessageText = emptyCartMessage.getText();
@@ -155,5 +165,139 @@ public class Cart extends BasePage {
 	}
 
 
+	public int getShoppingCartProducts() {
+		List<WebElement> viewCartTableRows = driver.findElements(By.xpath("//div[@class='table-responsive']//table//tr"));
+		int numOfProducts = viewCartTableRows.size() - 1;
+		return numOfProducts;
+	}
 
+	public String getViewCartTableData_ProductImageCaption() {
+		WebElement viewCartTableImageCaption = driver.findElement(By.xpath("//div[@class='table-responsive']//table//tbody//td[1]//img"));
+		String imageCaption = viewCartTableImageCaption.getDomAttribute("alt");
+		return imageCaption;
+	}
+	
+	public String getViewCartTableData_ProductName() {
+		WebElement viewCartTableProductName = driver.findElement(By.xpath("//div[@class='table-responsive']//table//tbody//td[2]//a"));
+		String productName = getElementText(viewCartTableProductName);
+		return productName;
+	}
+	
+	
+	public int getViewCartTableData_ProductQuantity() {
+		WebElement viewCartTableQuantityCount = driver.findElement(By.xpath("//div[@class='table-responsive']//table//tr//td[4]//input"));
+		int qtyCount = Integer.parseInt(viewCartTableQuantityCount.getDomAttribute("value"));
+		return qtyCount;
+	}	
+	
+	public List<String> getViewCartTableData_ProductNames() {
+		List<String> productLinks = new ArrayList<>();
+		List<WebElement> viewCartTableRows = driver.findElements(By.xpath("//div[@class='table-responsive']//table//tr"));
+		for(int r = 1; r < viewCartTableRows.size(); r++ ) {
+			WebElement row = viewCartTableRows.get(r);
+			List<WebElement> viewCartTableProductLinks = row.findElements(By.tagName("a"));
+			for(WebElement link : viewCartTableProductLinks) {
+				String productLinkText = link.getText();
+				if(!productLinkText.trim().isEmpty()) {
+					productLinks.add(productLinkText);
+				};
+			}
+		}
+		return productLinks;
+	}
+	
+	
+	public List<Integer> getViewCartTableData_ProductQuantities() {
+		List<Integer> productQuantities = new ArrayList<>();
+		List<WebElement> viewCartTableRows = driver.findElements(By.xpath("//div[@class='table-responsive']//table//tr"));
+		for(int r = 1; r < viewCartTableRows.size(); r++ ) {
+			WebElement row = viewCartTableRows.get(r);
+			List<WebElement> viewCartTableProductQuantityInput = row.findElements(By.xpath("td[4]//input"));
+			for(WebElement input : viewCartTableProductQuantityInput) {
+				String productQuantity = input.getDomAttribute("value");
+				if(!productQuantity.trim().isEmpty()) {
+					productQuantities.add(Integer.parseInt(productQuantity));
+				};
+			}
+		}
+		return productQuantities;
+	}
+	
+	public void assertCartProductsInfo(int expectedRowCount, List<String> expectedProductNames, int expectedCount, List<Integer> expectedQuantities, List<String> expectedUnitPrices, List<String> expectedTotalPrices) {
+		cart = new Cart(driver);
+		int actualRowCount = cart.getShoppingCartProducts();
+		List<String> actualProductNames = cart.getViewCartTableData_ProductNames();
+		List<Integer> actualQuantities = cart.getViewCartTableData_ProductQuantities();
+		List<String> actualUnitPrices = cart.getViewCartTableData_ProductUnitPrices();
+		List<String> actualTotalPrices = cart.getViewCartTableData_ProductTotalPrices();
+		Assert.assertEquals(actualRowCount, expectedRowCount);
+		Assert.assertEquals(actualProductNames, expectedProductNames);
+		Assert.assertEquals(cart.getShoppingCartProducts(), expectedCount);
+		Assert.assertEquals(actualQuantities.size(), expectedQuantities.size());
+		Assert.assertEquals(actualQuantities, expectedQuantities);
+		Assert.assertEquals(actualUnitPrices, expectedUnitPrices);
+		Assert.assertEquals(actualTotalPrices, expectedTotalPrices);
+	}
+	
+	public void assertCartProductInfo(int expectedRowCount, String expectedImageCaption, String expectedProductName, int expectedProductQuantity, String expectedUnitPrice, String expectedTotalPrice) {
+		cart = new Cart(driver);
+		int actualRowCount = cart.getShoppingCartProducts();
+		String actualImageCaption = cart.getViewCartTableData_ProductImageCaption();
+		String actualProductName = cart.getViewCartTableData_ProductName();
+		int actualProductQuantity = cart.getViewCartTableData_ProductQuantity();
+		String actualUnitPrice = cart.getViewCartTableData_ProductUnitPrice();
+		String actualTotalPrice = cart.getViewCartTableData_ProductTotalPrice();
+		Assert.assertEquals(actualRowCount, expectedRowCount);
+		Assert.assertEquals(actualImageCaption, expectedImageCaption);
+		Assert.assertEquals(actualProductName, expectedProductName);
+		Assert.assertEquals(actualProductQuantity, expectedProductQuantity);
+		Assert.assertEquals(actualUnitPrice, expectedUnitPrice);
+		Assert.assertEquals(actualTotalPrice, expectedTotalPrice);
+	}
+	
+	public String getViewCartTableData_ProductUnitPrice() {
+		WebElement viewCartTableUnitPrice = driver.findElement(By.xpath("//div[@class='table-responsive']//table//tbody//td[5]"));
+		String unitPrice = getElementText(viewCartTableUnitPrice).replace("$", "").trim();
+		return unitPrice;
+	}
+	
+	public String getViewCartTableData_ProductTotalPrice() {
+		WebElement viewCartTableTotalPrice = driver.findElement(By.xpath("//div[@class='table-responsive']//table//tbody//td[6]"));
+		String totalPrice = getElementText(viewCartTableTotalPrice).replace("$", "").trim();
+		return totalPrice;
+	}
+	
+	public List<String> getViewCartTableData_ProductUnitPrices() {
+		List<String> productUnitPrices = new ArrayList<>();
+		List<WebElement> viewCartTableRows = driver.findElements(By.xpath("//div[@class='table-responsive']//table//tr"));
+		for(int r = 1; r < viewCartTableRows.size(); r++ ) {
+			WebElement row = viewCartTableRows.get(r);
+			List<WebElement> viewCartTableProductUnitPrices = row.findElements(By.xpath("td[5]"));
+			for(WebElement price : viewCartTableProductUnitPrices) {
+				String unitPriceText = price.getText();
+				String unitPrice = unitPriceText.replace("$", "").trim();
+				if(!unitPrice.trim().isEmpty()) {
+					productUnitPrices.add(unitPrice);
+				};
+			}
+	}
+		return productUnitPrices;
+	}
+	
+	public List<String> getViewCartTableData_ProductTotalPrices() {
+		List<String> productTotalPrices = new ArrayList<>();
+		List<WebElement> viewCartTableRows = driver.findElements(By.xpath("//div[@class='table-responsive']//table//tr"));
+		for(int r = 1; r < viewCartTableRows.size(); r++ ) {
+			WebElement row = viewCartTableRows.get(r);
+			List<WebElement> viewCartTableProductTotalPrices = row.findElements(By.xpath("td[6]"));
+			for(WebElement totalPrices : viewCartTableProductTotalPrices) {
+				String totalPriceText = totalPrices.getText();
+				String totalPrice = totalPriceText.replace("$", "").trim();
+				if(!totalPrice.trim().isEmpty()) {
+					productTotalPrices.add(totalPrice);
+				};
+			}
+		}
+		return productTotalPrices;
+	}
 }

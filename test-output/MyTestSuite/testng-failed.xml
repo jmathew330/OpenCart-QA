@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [MyTestSuite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="CartTests(failed)">
+  <listeners>
+    <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
+  </listeners>
+  <test thread-count="5" name="LoginPageTests(failed)">
     <classes>
-      <class name="testCases.Cart.TC_CART_002">
+      <class name="testCases.LoginPage.TC_002_LOGIN">
         <methods>
           <include name="tearDown"/>
-          <include name="testAddToCart_Macbook_AddToCart_QuantityAndPrice"/>
+          <include name="testLogin_NoAccountMessage"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- testCases.Cart.TC_CART_002 -->
+      </class> <!-- testCases.LoginPage.TC_002_LOGIN -->
     </classes>
-  </test> <!-- CartTests(failed) -->
+  </test> <!-- LoginPageTests(failed) -->
 </suite> <!-- Failed suite [MyTestSuite] -->

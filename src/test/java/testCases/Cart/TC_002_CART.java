@@ -11,9 +11,10 @@ public class TC_002_CART extends BaseClass {
 	Cart cart;
 	
 	@Test
-	public void testAddToCart_Macbook_AddToCart_QuantityAndPrice() {
+	public void testAddToCart_Macbook_AddToCart_QuantityAndPrice() throws InterruptedException {
 		cart = new Cart(driver);
 		cart.clickMacbookAddToCartButton();
+		Thread.sleep(3000);
 		String cartText = cart.getCartTotalButtonText();
 		int itemCount = cart.getItemCountFromCartTotal(cartText);
 		double totalPrice = cart.getTotalPriceFromCartTotal(cartText);

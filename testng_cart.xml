@@ -9,6 +9,11 @@
         	<class name="testCases.Cart.TC_004_CART" />
         	<class name="testCases.Cart.TC_005_CART" />
         	<class name="testCases.Cart.TC_006_CART" />
+        	<class name="testCases.Cart.TC_007_CART" />
+        	<class name="testCases.Cart.TC_008_CART" />
+        	<class name="testCases.Cart.TC_009_CART" />
+        	<class name="testCases.Cart.TC_010_CART" />
+        	<class name="testCases.Cart.TC_011_CART" />
        	</classes>
     </test>
 </suite>

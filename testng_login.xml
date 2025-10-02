@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="MyTestSuite">
+    <listeners>
+        <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
+    </listeners>
+        <test name="LoginPageTests">
+    	<classes>
+        	<class name="testCases.LoginPage.TC_001_LOGIN" />
+        	<class name="testCases.LoginPage.TC_002_LOGIN" />
+       	</classes>
+    </test>
+</suite>
