@@ -67,7 +67,7 @@
         <version>3.5.4</version>
         <configuration>
           <suiteXmlFiles>
-            <suiteXmlFile>testng_login.xml</suiteXmlFile>
+            <suiteXmlFile>testng_cart.xml</suiteXmlFile>
           </suiteXmlFiles>
           <systemPropertyVariables>
           <allure.results.directory>target/allure-results</allure.results.directory>
