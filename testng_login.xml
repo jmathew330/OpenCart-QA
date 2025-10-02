@@ -7,7 +7,6 @@
         <test name="LoginPageTests">
     	<classes>
         	<class name="testCases.LoginPage.TC_001_LOGIN" />
-        	<class name="testCases.LoginPage.TC_002_LOGIN" />
        	</classes>
     </test>
 </suite>

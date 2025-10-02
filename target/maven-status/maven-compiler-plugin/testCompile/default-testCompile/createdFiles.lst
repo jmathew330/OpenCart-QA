@@ -49,7 +49,6 @@ pages/Cart.class
 testCases/RegisterPage/TC_012_REGISTER.class
 pages/BasePage.class
 testCases/Homepage/TC_009_HOMEPAGE.class
-testCases/LoginPage/TC_003_LOGIN.class
 testCases/LoginPage/TC_001_LOGIN.class
 testCases/Cart/TC_004_CART.class
 testCases/Homepage/TC_011_HOMEPAGE.class
