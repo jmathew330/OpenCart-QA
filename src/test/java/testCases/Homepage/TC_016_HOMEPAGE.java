@@ -1,10 +1,16 @@
 package testCases.Homepage;
 
-import org.testng.annotations.Test;
-import org.testng.Assert;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+import io.qameta.allure.Feature;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
+import io.qameta.allure.Story;
 import pages.HomePage;
 import testBase.BaseClass;
 
@@ -12,13 +18,19 @@ public class TC_016_HOMEPAGE extends BaseClass {
 	
 	HomePage homePage;
 	
-	@Test
+	@Feature("Featured Section")
+	@Story("TC_016_HOMEPAGE - Verify Featured Products Info")
+	@Test(description = "Verify that each featured product has image, name, description, and price.")
+	@Severity(SeverityLevel.NORMAL)
 	public void testFeaturedSectionElementsVisibility_Images() {
 		homePage = new HomePage(driver);
 		Assert.assertTrue(homePage.isFeaturedImagesDisplayed());
 	}
 	
-	@Test
+	@Feature("Featured Section")
+	@Story("TC_016_HOMEPAGE - Verify Featured Products Info")
+	@Test(description = "Verify that each featured product has image, name, description, and price.")
+	@Severity(SeverityLevel.NORMAL)
 	public void testFeaturedSectionElements_Images_URL() {
 		homePage = new HomePage(driver);
         String actualURLsString = homePage.getFeaturedImagesURL();
@@ -34,7 +46,10 @@ public class TC_016_HOMEPAGE extends BaseClass {
         System.out.println(actualURLs);
 	}
 	
-	@Test
+	@Feature("Featured Section")
+	@Story("TC_016_HOMEPAGE - Verify Featured Products Info")
+	@Test(description = "Verify that each featured product has image, name, description, and price.")
+	@Severity(SeverityLevel.NORMAL)
 	public void testFeaturedSectionElements_Images_Title() {
 		homePage = new HomePage(driver);
 		String actualTitlesString = homePage.getFeaturedImagesTitle();
@@ -49,7 +64,10 @@ public class TC_016_HOMEPAGE extends BaseClass {
 		System.out.println(actualTitles);
 	}
 	
-	@Test
+	@Feature("Featured Section")
+	@Story("TC_016_HOMEPAGE - Verify Featured Products Info")
+	@Test(description = "Verify that each featured product has image, name, description, and price.")
+	@Severity(SeverityLevel.NORMAL)
 	public void testFeaturedSectionElements_Images_Caption() {
 		homePage = new HomePage(driver);
 		String actualCaptionsString = homePage.getFeaturedImagesCaption();
@@ -63,7 +81,10 @@ public class TC_016_HOMEPAGE extends BaseClass {
 		System.out.println(actualCaptions);
 	}
 	
-	@Test
+	@Feature("Featured Section")
+	@Story("TC_016_HOMEPAGE - Verify Featured Products Info")
+	@Test(description = "Verify that each featured product has image, name, description, and price.")
+	@Severity(SeverityLevel.NORMAL)
 	public void testFeaturedSectionElements_Images_Price() {
 		homePage = new HomePage(driver);
 		String actualPricesString = homePage.getFeaturedImagesPrice();
@@ -77,7 +98,10 @@ public class TC_016_HOMEPAGE extends BaseClass {
 		Assert.assertEquals(actualPricesNew, expectedPrices);
 	}
 	
-	@Test
+	@Feature("Featured Section")
+	@Story("TC_016_HOMEPAGE - Verify Featured Products Info")
+	@Test(description = "Verify that each featured product has image, name, description, and price.")
+	@Severity(SeverityLevel.NORMAL)
 	public void testFeaturedSectionElements_Images_OldPrice() {
 		homePage = new HomePage(driver);
 		String actualOldPricesString = homePage.getFeaturedImagesOldPrice();
@@ -86,7 +110,10 @@ public class TC_016_HOMEPAGE extends BaseClass {
 		Assert.assertEquals(actualOldPrices, expectedOldPrices);
 	}
 	
-	@Test
+	@Feature("Featured Section")
+	@Story("TC_016_HOMEPAGE - Verify Featured Products Info")
+	@Test(description = "Verify that each featured product has image, name, description, and price.")
+	@Severity(SeverityLevel.NORMAL)
 	public void testFeaturedSectionElements_Images_TaxPrice() {
 		homePage = new HomePage(driver);
 		String actualTaxPriceString = homePage.getFeaturedImagesTaxPrice();

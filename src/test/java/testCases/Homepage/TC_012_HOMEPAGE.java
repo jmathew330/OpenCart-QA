@@ -1,7 +1,12 @@
 package testCases.Homepage;
 
-import org.testng.annotations.Test;
 import org.testng.Assert;
+import org.testng.annotations.Test;
+
+import io.qameta.allure.Feature;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
+import io.qameta.allure.Story;
 import pages.HomePage;
 import testBase.BaseClass;
 
@@ -9,7 +14,10 @@ public class TC_012_HOMEPAGE extends BaseClass {
 	
 	HomePage homePage;
 	
-	@Test
+	@Feature("Navigation Menu")
+	@Story("TC_012_HOMEPAGE - Verify Navigation Menu Links")
+	@Test(description = "Verify that all main navigation menu links are displayed in the correct order.")
+	@Severity(SeverityLevel.BLOCKER)
 	public void testNavLinksTextVisibility() {
 		homePage = new HomePage(driver);
 		Assert.assertTrue(homePage.getDesktopNavLinkText().contains("Desktops"));

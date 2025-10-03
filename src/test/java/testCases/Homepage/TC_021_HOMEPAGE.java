@@ -1,9 +1,13 @@
 package testCases.Homepage;
 
 
-import org.testng.annotations.Test;
 import org.testng.Assert;
+import org.testng.annotations.Test;
 
+import io.qameta.allure.Feature;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
+import io.qameta.allure.Story;
 import pages.HomePage;
 import testBase.BaseClass;
 
@@ -12,7 +16,10 @@ public class TC_021_HOMEPAGE extends BaseClass {
 	HomePage homePage;
 	
 	
-	@Test(priority=1)
+	@Feature("Navigation Redirection")
+	@Story("TC_021_HOMEPAGE - Verify Redirection from Desktops Menu")
+	@Test(description = "Verify PC, Mac, and Show All redirect to correct pages.", priority=1)
+	@Severity(SeverityLevel.NORMAL)
 	public void testDesktopsMenuPageRedirection_PC() throws InterruptedException {
 		homePage = new HomePage(driver);
 		homePage.hoverToDesktopLink();
@@ -22,7 +29,10 @@ public class TC_021_HOMEPAGE extends BaseClass {
 		Assert.assertTrue(homePage.getDesktopsLink_PC_HeadingText().contains("PC"));
 	}
 
-	@Test(priority=2)
+	@Feature("Navigation Redirection")
+	@Story("TC_021_HOMEPAGE - Verify Redirection from Desktops Menu")
+	@Test(description = "Verify PC, Mac, and Show All redirect to correct pages.", priority=2)
+	@Severity(SeverityLevel.NORMAL)
 	public void testDesktopsMenuPageRedirection_Mac() throws InterruptedException {
 		homePage = new HomePage(driver);
 		homePage.hoverToDesktopLink();
@@ -32,7 +42,10 @@ public class TC_021_HOMEPAGE extends BaseClass {
 		Assert.assertTrue(homePage.getDesktopsLink_Mac_HeadingText().contains("Mac"));
 	}
 	
-	@Test(priority=3)
+	@Feature("Navigation Redirection")
+	@Story("TC_021_HOMEPAGE - Verify Redirection from Desktops Menu")
+	@Test(description = "Verify PC, Mac, and Show All redirect to correct pages.", priority=3)
+	@Severity(SeverityLevel.NORMAL)
 	public void testDesktopsMenuPageRedirection_Desktops() throws InterruptedException {
 		homePage = new HomePage(driver);
 		homePage.hoverToDesktopLink();

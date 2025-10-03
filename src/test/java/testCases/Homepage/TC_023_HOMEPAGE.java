@@ -1,7 +1,12 @@
 package testCases.Homepage;
 
-import org.testng.annotations.Test;
 import org.testng.Assert;
+import org.testng.annotations.Test;
+
+import io.qameta.allure.Feature;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
+import io.qameta.allure.Story;
 import pages.HomePage;
 import testBase.BaseClass;
 
@@ -9,7 +14,11 @@ public class TC_023_HOMEPAGE extends BaseClass {
 	
 	HomePage homePage;
 	
-	@Test(priority=1)
+	
+	@Feature("Navigation Redirection")
+	@Story("TC_023_HOMEPAGE - Verify Redirection from Components Menu")
+	@Test(description = "Verify all component submenu links redirect correctly.", priority=1)
+	@Severity(SeverityLevel.NORMAL)
 	public void testComponentsMenuPageRedirection_MiceTrackballs() throws InterruptedException {
 		homePage = new HomePage(driver);
 		homePage.hoverToComponentsLink();
@@ -18,8 +27,12 @@ public class TC_023_HOMEPAGE extends BaseClass {
 		Assert.assertEquals(homePage.getPageURL(), "https://tutorialsninja.com/demo/index.php?route=product/category&path=25_29");
 		Assert.assertTrue(homePage.getComponentsLink_MiceTrackballs_HeadingText().contains("Mice and Trackballs"));
 	}
+		
 	
-	@Test(priority=2)
+	@Feature("Navigation Redirection")
+	@Story("TC_023_HOMEPAGE - Verify Redirection from Components Menu")
+	@Test(description = "Verify all component submenu links redirect correctly.", priority=2)
+	@Severity(SeverityLevel.NORMAL)
 	public void testComponentsMenuPageRedirection_Monitors() throws InterruptedException {
 		homePage = new HomePage(driver);
 		homePage.hoverToComponentsLink();
@@ -29,7 +42,11 @@ public class TC_023_HOMEPAGE extends BaseClass {
 		Assert.assertTrue(homePage.getComponentsLink_Monitors_HeadingText().contains("Monitors"));
 	}
 	
-	@Test(priority=3)
+	
+	@Feature("Navigation Redirection")
+	@Story("TC_023_HOMEPAGE - Verify Redirection from Components Menu")
+	@Test(description = "Verify all component submenu links redirect correctly.", priority=3)
+	@Severity(SeverityLevel.NORMAL)
 	public void testComponentsMenuPageRedirection_Printers() throws InterruptedException {
 		homePage = new HomePage(driver);
 		homePage.hoverToComponentsLink();
@@ -39,7 +56,11 @@ public class TC_023_HOMEPAGE extends BaseClass {
 		Assert.assertTrue(homePage.getComponentsLink_Printers_HeadingText().contains("Printers"));
 	}
 	
-	@Test(priority=4)
+
+	@Feature("Navigation Redirection")
+	@Story("TC_023_HOMEPAGE - Verify Redirection from Components Menu")
+	@Test(description = "Verify all component submenu links redirect correctly.", priority=4)
+	@Severity(SeverityLevel.NORMAL)
 	public void testComponentsMenuPageRedirection_Scanners() throws InterruptedException {
 		homePage = new HomePage(driver);
 		homePage.hoverToComponentsLink();
@@ -49,7 +70,11 @@ public class TC_023_HOMEPAGE extends BaseClass {
 		Assert.assertTrue(homePage.getComponentsLink_Scanners_HeadingText().contains("Scanners"));
 	}
 	
-	@Test(priority=5)
+
+	@Feature("Navigation Redirection")
+	@Story("TC_023_HOMEPAGE - Verify Redirection from Components Menu")
+	@Test(description = "Verify all component submenu links redirect correctly.", priority=5)
+	@Severity(SeverityLevel.NORMAL)
 	public void testComponentsMenuPageRedirection_WebCameras() throws InterruptedException {
 		homePage = new HomePage(driver);
 		homePage.hoverToComponentsLink();
@@ -59,7 +84,11 @@ public class TC_023_HOMEPAGE extends BaseClass {
 		Assert.assertTrue(homePage.getComponentsLink_WebCameras_HeadingText().contains("Web Cameras"));
 	}
 	
-	@Test(priority=6)
+
+	@Feature("Navigation Redirection")
+	@Story("TC_023_HOMEPAGE - Verify Redirection from Components Menu")
+	@Test(description = "Verify all component submenu links redirect correctly.", priority=6)
+	@Severity(SeverityLevel.NORMAL)
 	public void testComponentsMenuPageRedirection_Components() throws InterruptedException {
 		homePage = new HomePage(driver);
 		homePage.hoverToComponentsLink();

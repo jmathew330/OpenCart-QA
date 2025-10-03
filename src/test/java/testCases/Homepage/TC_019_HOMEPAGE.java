@@ -1,9 +1,15 @@
 package testCases.Homepage;
 
-import org.testng.annotations.Test;
 import java.util.Arrays;
 import java.util.List;
+
 import org.testng.Assert;
+import org.testng.annotations.Test;
+
+import io.qameta.allure.Feature;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
+import io.qameta.allure.Story;
 import pages.HomePage;
 import testBase.BaseClass;
 
@@ -11,15 +17,22 @@ public class TC_019_HOMEPAGE extends BaseClass {
 	
 	HomePage homePage;
 	
-	
-	@Test
+
+	@Feature("Footer Content")
+	@Story("TC_019_HOMEPAGE - Verify Footer Section Headings")
+	@Test(description = "Verify footer contains all expected group headings.")
+	@Severity(SeverityLevel.MINOR)
 	public void testFooterHeadingsVisibility() throws InterruptedException {
 		homePage = new HomePage(driver);
 		homePage.scrollToFooter();
 		Assert.assertTrue(homePage.isFooterHeadingsDisplayed());
 	}
 	
-	@Test
+
+	@Feature("Footer Content")
+	@Story("TC_019_HOMEPAGE - Verify Footer Section Headings")
+	@Test(description = "Verify footer contains all expected group headings.")
+	@Severity(SeverityLevel.MINOR)
 	public void testFooterHeadingsText() {
 		homePage = new HomePage(driver);
 		String actualFooterHeadingsTextString = homePage.getFooterHeadingsText();

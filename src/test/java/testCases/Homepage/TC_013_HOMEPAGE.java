@@ -1,16 +1,24 @@
 package testCases.Homepage;
 
-import org.testng.annotations.Test;
 import org.testng.Assert;
+import org.testng.annotations.Test;
 
+import io.qameta.allure.Feature;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
+import io.qameta.allure.Story;
 import pages.HomePage;
 import testBase.BaseClass;
 
 public class TC_013_HOMEPAGE extends BaseClass {
 	
 	HomePage homePage;
-	
-	@Test(priority=1)
+
+
+	@Feature("Navigation Menu")
+	@Story("TC_013_HOMEPAGE - Verify Dropdown Menus in Navigation")
+	@Test(description = "Verify that each navigation item has a dropdown with correct submenu links.", priority=1)
+	@Severity(SeverityLevel.BLOCKER)
 	public void testNavDropdownLinksVisibility_Desktops_HeaderUI() {
 		homePage = new HomePage(driver);
 		homePage.hoverToDesktopLink();
@@ -19,7 +27,11 @@ public class TC_013_HOMEPAGE extends BaseClass {
 		Assert.assertEquals(actualText, expectedText);
 	}
 	
-	@Test(priority=2)
+
+	@Feature("Navigation Menu")
+	@Story("TC_013_HOMEPAGE - Verify Dropdown Menus in Navigation")
+	@Test(description = "Verify that each navigation item has a dropdown with correct submenu links.", priority=2)
+	@Severity(SeverityLevel.BLOCKER)
 	public void testNavDropdownLinksVisibility_LaptopsNotebooks_HeaderUI() {
 		homePage = new HomePage(driver);
 		homePage.hoverToLaptopsNotebooksLink();
@@ -28,7 +40,11 @@ public class TC_013_HOMEPAGE extends BaseClass {
 		Assert.assertEquals(actualText, expectedText);
 	}
 	
-	@Test(priority=3)
+
+	@Feature("Navigation Menu")
+	@Story("TC_013_HOMEPAGE - Verify Dropdown Menus in Navigation")
+	@Test(description = "Verify that each navigation item has a dropdown with correct submenu links.", priority=3)
+	@Severity(SeverityLevel.BLOCKER)
 	public void testNavDropdownLinksVisibility_Components_HeaderUI() {
 		homePage = new HomePage(driver);
 		homePage.hoverToComponentsLink();
@@ -37,7 +53,11 @@ public class TC_013_HOMEPAGE extends BaseClass {
 		Assert.assertEquals(actualText, expectedText);
 	}
 	
-	@Test(priority=4)
+
+	@Feature("Navigation Menu")
+	@Story("TC_013_HOMEPAGE - Verify Dropdown Menus in Navigation")
+	@Test(description = "Verify that each navigation item has a dropdown with correct submenu links.", priority=4)
+	@Severity(SeverityLevel.BLOCKER)
 	public void testNavDropdownLinksVisibility_MP3Players_HeaderUI() {
 		homePage = new HomePage(driver);
 		homePage.hoverToMP3PlayersLink();

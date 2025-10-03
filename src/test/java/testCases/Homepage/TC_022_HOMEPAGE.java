@@ -1,7 +1,12 @@
 package testCases.Homepage;
 
-import org.testng.annotations.Test;
 import org.testng.Assert;
+import org.testng.annotations.Test;
+
+import io.qameta.allure.Feature;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
+import io.qameta.allure.Story;
 import pages.HomePage;
 import testBase.BaseClass;
 
@@ -9,7 +14,10 @@ public class TC_022_HOMEPAGE extends BaseClass {
 	
 	HomePage homePage;
 	
-	@Test(priority=1)
+	@Feature("Navigation Redirection")
+	@Story("TC_022_HOMEPAGE - Verify Redirection from Laptops Menu")
+	@Test(description = "Verify Mac, Windows, and Show All options redirect correctly.", priority=1)
+	@Severity(SeverityLevel.NORMAL)
 	public void testLaptopsNotebooksMenuPageRedirection_Macs() throws InterruptedException {
 		homePage = new HomePage(driver);
 		homePage.hoverToLaptopsNotebooksLink();
@@ -19,7 +27,10 @@ public class TC_022_HOMEPAGE extends BaseClass {
 		Assert.assertTrue(homePage.getLaptopsNotebooksLink_Macs_HeadingText().contains("Macs"));
 	}
 	
-	@Test(priority=2)
+	@Feature("Navigation Redirection")
+	@Story("TC_022_HOMEPAGE - Verify Redirection from Laptops Menu")
+	@Test(description = "Verify Mac, Windows, and Show All options redirect correctly.", priority=2)
+	@Severity(SeverityLevel.NORMAL)
 	public void testLaptopsNotebooksMenuPageRedirection_Windows() throws InterruptedException {
 		homePage = new HomePage(driver);
 		homePage.hoverToLaptopsNotebooksLink();
@@ -29,7 +40,10 @@ public class TC_022_HOMEPAGE extends BaseClass {
 		Assert.assertTrue(homePage.getLaptopsNotebooksLink_Windows_HeadingText().contains("Windows"));
 	}
 	
-	@Test(priority=3)
+	@Feature("Navigation Redirection")
+	@Story("TC_022_HOMEPAGE - Verify Redirection from Laptops Menu")
+	@Test(description = "Verify Mac, Windows, and Show All options redirect correctly.", priority=3)
+	@Severity(SeverityLevel.NORMAL)
 	public void testLaptopsNotebooksMenuPageRedirection_LaptopsNotebooks() throws InterruptedException {
 		homePage = new HomePage(driver);
 		homePage.hoverToLaptopsNotebooksLink();
