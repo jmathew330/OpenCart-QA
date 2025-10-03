@@ -3,6 +3,10 @@ package testCases.Cart;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import io.qameta.allure.Feature;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
+import io.qameta.allure.Story;
 import pages.Cart;
 import testBase.BaseClass;
 
@@ -10,7 +14,10 @@ public class TC_008_CART extends BaseClass {
 	
 	Cart cart;
 	
-	@Test
+	@Feature("Cart Multiple Items Remove")
+	@Story("TC_CART_008 - Verify cart after removing MacBook + iPhone")
+	@Severity(SeverityLevel.NORMAL)
+	@Test(description = "Ensure quantity and price update correctly after removing multiple products from the cart")
 	public void testAddToCart_Macbook_iPhone_RemoveFromCart_QuantityAndPrice() throws InterruptedException {
 		cart = new Cart(driver);
 		cart.clickMacbookAddToCartButton();
